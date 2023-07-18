@@ -166,3 +166,72 @@ Take a look at the following example:*/
 the first_declared selector. Any html element with BOTH OF THOSE CLASSES
 Example <div class="first_declared last_declared"></div> 
 would have the styles defined in .last_declared instead of .first_declared.*/
+
+/* ------------------------------------------------------------------------------------------------ */
+/* Properties to Get Started With */
+/* Color and Background-Color */
+
+/* Both of these properties can accept one of several kinds of values.
+ A common one is a keyword, such as an actual color name like red 
+ or the transparent keyword. They also accept HEX, RGB, and HSL values, 
+ which you may be familiar with if you’ve ever used a photoshop program 
+ or a site where you could customize your profile colors. */
+ h6 {
+  color: #9990ff;
+ }
+/* Trong trường hợp này thì cái viết sau sẽ là cái được tác dụng 
+ - biến thành màu đỏ
+ Vì theo quy tắc Order Matter, cái sau sẽ overide cái trước */
+ h6 {
+  color: red;
+ }  
+ h6 {
+  color:rgb(20, 50, 10)
+ }
+ h6{
+  color: coral;
+ }
+
+ /* Take a quick look at CSS Legal Color Values:
+ https://www.w3schools.com/cssref/css_colors_legal.php
+ to see how you can
+ adjust the opacity of these colors by adding an alpha value. */
+
+ /* font-family */
+ /* font-size */
+ /* font-weight */
+ /* text-align */
+
+ /* Image Height and Width */
+ /* By default, an <img> element’s height and width values 
+will be the same as the actual image file’s height and width. 
+If you wanted to adjust the size of the image without 
+causing it to lose its proportions, you would use a value of “auto” 
+for the height property and adjust the width value: */
+img {
+  height: 200px;
+  width: 300px;
+}
+/* It’s best to include both of these properties for <img> elements,
+ even if you don’t plan on adjusting the values from the image file’s original
+ ones. When these values aren’t included, if an image takes longer to load
+ than the rest of the page contents, the image won’t take up any space 
+ on the page at first, but will suddenly cause a drastic shift of the 
+ other page contents once it does load in. Explicitly stating 
+ a height and width prevents this from happening, as space will 
+ be “reserved” on the page and will just appear as a blank space 
+ until the image loads. */
+
+ /* Adding CSS to HTML:
+ - External CSS: Seperate CSS File
+ - Internal CSS: Place inside html file, in 
+ <head>
+  <style>
+    div {
+      ....
+    } the same as the external method
+  </style>
+ </head>
+ - Inline CSS: ( Not recommended ) Place inside directly to HTML Elements:
+ + style attribute
+  */
