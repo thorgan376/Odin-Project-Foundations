@@ -13,70 +13,73 @@
     <link rel="stylesheet" href="index-page.css" />
   </head>
   <!-- Universal Selector: Below is every thing that universal selector affect -->
-  <body style="height: 100%; width: fit-content; margin: 50px">
-    <h1>Odin Recipes</h1>
-    <ul>
-      <li>
-        <a href="./recipes/Donut/Donut.html">Cách làm Bánh Donut ngon và giòn</a>
-      </li>
-      <li>
-        <a href="./recipes/Pizza/Pizza.html">Cách làm Pizza Đơn giản tại nhà</a>
-      </li>
-      <li>
-        <a href="./recipes/Spaghetti/Spaghetti.html"
-          >Cách làm Bánh Mì Ý Spaghetti sốt bò cà chua</a
-        >
-      </li>
-    </ul>
-    <!-- Type Selector -->
-    <div class="alert-text">Hello, World!</div>
-    <div>Hello again!</div>
-    <p class="alert-text">Hi...</p>
-    <div>Okay, bye.</div>
-    <!-- Class Selectors -->
-    <div class="alert-text">Please agree to our terms of service.</div>
-    <!-- ID Selectors -->
-    <div class="alpha" id="title">My Awesome 90's Page</div>
-
-    <!-- Chaining selector: Let’s say we had the following HTML: -->
-    <div>
-      <div class="subsection header">Latest Posts</div>
-
-      <!-- We have two elements with the subsection class 
-         that have some sort of unique styles,
-         but what if we only want to apply a separate rule to the element that also has header as a second class? 
-         Well, we could chain both the class selectors together in our CSS like so: (Open Css file) -->
-
-      <!-- This can also be used to chain a class and an ID, as shown below: -->
-      <p class="subsection" id="preview">
-        This is where a preview for a post might go.
-      </p>
+  <body class="body">
+    <div id="page-link">
+      <h1>Odin Recipes</h1>
+      <ul>
+        <li>
+          <a href="./recipes/Donut/Donut.html"
+            >Cách làm Bánh Donut ngon và giòn</a
+          >
+        </li>
+        <li>
+          <a href="./recipes/Pizza/Pizza.html"
+            >Cách làm Pizza Đơn giản tại nhà</a
+          >
+        </li>
+        <li>
+          <a href="./recipes/Spaghetti/Spaghetti.html"
+            >Cách làm Bánh Mì Ý Spaghetti sốt bò cà chua</a
+          >
+        </li>
+      </ul>
     </div>
 
-    <!-- Descendant Combinator -->
-    <div class="ancestor">
-      <div class="child">
-        <div class="contents">
-            The hologram
+    <h1 class="header-text">CSS Practices</h1>
+    <div id="css-practice">
+      <!-- Type Selector -->
+      <div class="alert-text">Hello, World!</div>
+      <div>Hello again!</div>
+      <p class="alert-text">Hi...</p>
+      <div>Okay, bye.</div>
+      <!-- Class Selectors -->
+      <div class="alert-text">Please agree to our terms of service.</div>
+      <!-- ID Selectors -->
+      <div class="alpha" id="title">My Awesome 90's Page</div>
+
+      <!-- Chaining selector: Let’s say we had the following HTML: -->
+      <div>
+        <div class="subsection header">Latest Posts</div>
+
+        <!-- We have two elements with the subsection class 
+          that have some sort of unique styles,
+          but what if we only want to apply a separate rule to the element that also has header as a second class? 
+          Well, we could chain both the class selectors together in our CSS like so: (Open Css file) -->
+
+        <!-- This can also be used to chain a class and an ID, as shown below: -->
+        <p class="subsection" id="preview">
+          This is where a preview for a post might go.
+        </p>
+      </div>
+
+      <!-- Descendant Combinator -->
+      <div class="ancestor">
+        <div class="child">
+          <div class="contents">The hologram</div>
         </div>
       </div>
+
+      <div class="contents">The hologram</div>
+
+      <!-- Order Matters -->
+      <p class="first_declared">The first declared</p>
+      <p class="last_declared">The last declared</p>
+      <p class="first_declared last_declared">The both declared</p>
+      <p>Something has changed - you see it ?</p>
+
+      <!-- Properties to Get Started With -->
+      <h6>Haha</h6>
     </div>
-
-    <div class="contents">
-      The hologram
-    </div>
-
-    <!-- Order Matters -->
-    <p class="first_declared">The first declared</p>
-    <p class="last_declared">The last declared</p>
-    <p class="first_declared last_declared">The both declared</p>
-    <p>Something has changed - you see it ?</p>
-
-    <!-- Properties to Get Started With -->
-    <h6>
-      Haha
-    </h6>
-    
     <script src="" async defer></script>
   </body>
 </html>

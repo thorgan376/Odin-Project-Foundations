@@ -5,6 +5,32 @@ have the color: purple; style applied to it. */
 * {
   color: purple;
 }
+
+.body {
+  background-color: aliceblue;
+  color: black;
+}
+
+#page-link {
+  margin: auto;
+  width: 470px;
+  text-align: center;
+  background-color: aliceblue;
+}
+
+.header-text {
+  margin: auto;
+  width: 470px;
+  text-align: center;
+}
+
+#css-practice {
+  margin: 0px auto;
+  border: 2px dashed black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 470px;
+}
 /* ------------------------------------------------------------------------------------------------ */
 /* Type Selectors
 
@@ -13,8 +39,8 @@ will select all elements of the given
 element type, and the syntax is just 
 the name of the element: */
 div {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
 /* ------------------------------------------------------------------------------------------------ */
 /* Class Selectors
@@ -149,7 +175,8 @@ that is defined last has the most precedence;
 that is, the last rule overrides any rules before it.  
 Take a look at the following example:*/
 
-.first_declared, .last_declared {
+.first_declared,
+.last_declared {
   background-color: rgb(20, 50, 10);
   font-weight: 800;
 }
@@ -176,41 +203,41 @@ would have the styles defined in .last_declared instead of .first_declared.*/
  or the transparent keyword. They also accept HEX, RGB, and HSL values, 
  which you may be familiar with if you’ve ever used a photoshop program 
  or a site where you could customize your profile colors. */
- h6 {
+h6 {
   color: #9990ff;
- }
+}
 /* Trong trường hợp này thì cái viết sau sẽ là cái được tác dụng 
  - biến thành màu đỏ
  Vì theo quy tắc Order Matter, cái sau sẽ overide cái trước */
- h6 {
+h6 {
   color: red;
- }  
- h6 {
-  color:rgb(20, 50, 10)
- }
- h6{
+}
+h6 {
+  color: rgb(20, 50, 10);
+}
+h6 {
   color: coral;
- }
+}
 
- /* Take a quick look at CSS Legal Color Values:
+/* Take a quick look at CSS Legal Color Values:
  https://www.w3schools.com/cssref/css_colors_legal.php
  to see how you can
  adjust the opacity of these colors by adding an alpha value. */
 
- /* font-family */
- /* font-size */
- /* font-weight */
- /* text-align */
+/* font-family */
+/* font-size */
+/* font-weight */
+/* text-align */
 
- /* Image Height and Width */
- /* By default, an <img> element’s height and width values 
+/* Image Height and Width */
+/* By default, an <img> element’s height and width values 
 will be the same as the actual image file’s height and width. 
 If you wanted to adjust the size of the image without 
 causing it to lose its proportions, you would use a value of “auto” 
 for the height property and adjust the width value: */
 img {
-  height: 200px;
-  width: 300px;
+  width: 200px;
+  height: 300px;
 }
 /* It’s best to include both of these properties for <img> elements,
  even if you don’t plan on adjusting the values from the image file’s original
@@ -222,7 +249,7 @@ img {
  be “reserved” on the page and will just appear as a blank space 
  until the image loads. */
 
- /* Adding CSS to HTML:
+/* Adding CSS to HTML:
  - External CSS: Seperate CSS File
  - Internal CSS: Place inside html file, in 
  <head>
@@ -235,4 +262,3 @@ img {
  - Inline CSS: ( Not recommended ) Place inside directly to HTML Elements:
  + style attribute
   */
-  
