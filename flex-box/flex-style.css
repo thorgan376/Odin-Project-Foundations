@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995da;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  /* border: 1px solid #fff; */
+  width: 900px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  padding: 5px;
+  /* border: 1px solid #fff; */
+  justify-content: flex-end;
+  width: 200px;
+}
+.date {
+}
+
+.signup {
+    margin-left: auto;
+}
+
+.login {
+  margin-left: 20px;
+}
+
+.header-container {
+  color: #5995da;
+  background-color: #d6e9fe;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  width: 900px;
+  height: 300px;
+  justify-content: space-between;
+  /* align-items: stretch; */
+  align-items: center;
+}
+
+.social, .subscribe{
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.logo {
+}
+
+.subscribe {
+}
+
+.social,
+.logo,
+.subscribe {
+  /* border: 1px solid #fff; */
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  display: flex;
+  width: 900px;
+  /* height: 600px; */
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  order: 0;
+}
+
+/* Khi lộn flex-direction từ row sang column
+đồng nghĩa với việc ta cũng lộn vai trò của 
+justify-content với align-items với nhau 
+VD: Đơn giản là row thì ngang là JC còn dọc là AI
+còn column thì ngang là AI còn dọc là JC*/
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+.photo-grid-item.first-item {
+    order: 1;
+}
+
+.photo-grid-item.last-item {
+    order: -1;
+}
+
+.photo-grid-item {
+    order: 1;
+}
+
+.footer {
+display: flex;
+justify-content: space-between;
+}
+
+.footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    
+    flex: 1 1 auto;
+}
+
+.footer-one {
+    
+}
+
+.footer-two {
+}
+
+.footer-three {
+
+}
+
+.footer-one, .footer-three {
+    background-color: #5995da;
+    flex: initial;
+    width: 300px;
+}
