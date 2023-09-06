@@ -112,6 +112,47 @@ còn column thì ngang là AI còn dọc là JC*/
     order: 1;
 }
 
+.flex-form {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: min-content;
+  & > form { 
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    & > input{
+      border: none;
+      background-color: hsl(0, 0%, 93%);
+      border-radius: 0.25rem;
+      padding: .75rem 1rem;
+
+      &[type="text"] {
+        flex: 1 1 160px;
+      }
+
+      &[type="email"] {
+        flex: 3 1 200px;
+      }
+
+      &[type="submit"] {
+        flex: 1 1 80px;
+        background-color: #5995da;
+        color: white;
+        box-shadow: 0 .75rem .5rem -.5rem hsl(205, 53%, 48%);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+
+
 .footer {
 display: flex;
 justify-content: space-between;
