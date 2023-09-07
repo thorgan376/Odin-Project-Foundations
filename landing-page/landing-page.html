@@ -11,7 +11,6 @@
     <header>
       <div class="header-top">
         <p class="header-logo">Header Logo</p>
-
         <div class="header-link-text">
           <p>header link one</p>
           <p>header link two</p>
@@ -19,17 +18,18 @@
         </div>
       </div>
 
-      <div class="header-bottom" style="display: flex;
-      justify-content: space-around;">
-        <div>
-          <p>This website is awesome</p>
-          <p>
+      <div class="header-bottom">
+        <div class="left-div">
+          <p class="hero-main-text">This website is awesome</p>
+          <p class="hero-sub-text">
             This website has some subtext that goes here under the main title.
             It's a smaller font and the color is lower contrast
           </p>
-          <button>Sign up</button>
+          <button class="signup">Sign up</button>
         </div>
-        <img style="width: 300px; width: 500px;">
+        <div class="right-div">
+            <img src="resources/cat.png" onerror="this.src = 'resources/404-page-not-found.png'">
+        </div>
       </div>
     </header>
   </body>
