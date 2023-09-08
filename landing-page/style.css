@@ -62,7 +62,7 @@ header {
 
   & > .right-div {
     margin-left: 50px;
-    img {
+    & > img {
       max-width: 1000px;
       height: 300px;
       border-radius: 15px;
