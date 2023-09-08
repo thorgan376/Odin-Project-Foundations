@@ -4,14 +4,11 @@
 
 body {
   margin: 0px;
-  padding: 0;
 }
 
 header {
   background-color: #1f2937;
   padding: 0px 180px 150px;
-  min-width: 800px;
-  max-width: 1400px;
 }
 
 #header-top,
@@ -19,6 +16,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-width: 1000px;
 }
 
 #header-top {
@@ -118,14 +116,9 @@ header {
   }
 }
 
-#body-three {
-  display: flex;
-  justify-content: center;
-}
-
 .sign-up-advertise {
     background-color: #3882f6;
-    margin: 100px 0;
+    margin: 100px auto;
     width: 900px;
     border-radius: 8px;
     display: flex;
