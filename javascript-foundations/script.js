@@ -15,17 +15,16 @@ console.log("Fundamentals Part 1");
 // let currentUserName = "aoyaki";
 
 // /*We generally use upper case for constants that are “hard-coded”.
-//  Or, in other words, when the value is known 
+//  Or, in other words, when the value is known
 //  prior to execution and directly written into the code.
 
-//  In this code, birthday is exactly like that. 
+//  In this code, birthday is exactly like that.
 //  So we could use the upper case for it.*/
 // const birthday = "18.04.1982"; //upperCase
 
-
 // /*The age is calculated from birthday using someCode(),
 //  which means a function call that we didn’t explain yet (we will soon!),
-//  but the details don’t matter here, the point is that age 
+//  but the details don’t matter here, the point is that age
 //  is calculated somehow based on the birthday.*/
 // //const age = someCode(birthday); keep the lower case
 
@@ -86,7 +85,7 @@ console.log("Fundamentals Part 1");
 // alert("" + 1 + 0); //Test: can't guest ; Answer: 10 => Incorrect
 
 // alert("" - 1 + 0); //Test: -1; Answer: -1 => Correct
-// alert(true + false); 
+// alert(true + false);
 // //Test: 1; Answer: 1 => Correct: + operator convert anything to a numeric operation
 // alert(6 / "3"); //Test: 2; Answer: 2 => Correct
 // alert("2" * "3");//Test: 6; Answer: 6 => Correct
@@ -105,10 +104,10 @@ console.log("Fundamentals Part 1");
 // alert(null + 1); //Test: NaN; Answer: 1 => Incorrect: WOW, ANOTHER EXAMPLE MUST KEEP AN EYE ON
 
 // //undefined becomes NaN after the numeric conversion.
-// alert(undefined + 1); //Test: 1; Answer: NaN => Incorrect: Damn, the opposite of the above example 
+// alert(undefined + 1); //Test: 1; Answer: NaN => Incorrect: Damn, the opposite of the above example
 
-// //Space characters are trimmed off string start and end when a string is converted to a number. 
-// //Here the whole string consists of space characters, such as \t, \n and a “regular” space between them. 
+// //Space characters are trimmed off string start and end when a string is converted to a number.
+// //Here the whole string consists of space characters, such as \t, \n and a “regular” space between them.
 // //So, similarly to an empty string, it becomes 0.
 // alert(" \t \n" - 2);// Test: downgrade the line and NaN; Answer: -2; => Incorrect: Again ???
 
@@ -123,7 +122,7 @@ console.log("Fundamentals Part 1");
 //1
 console.log(23 + 97);
 //2
-console.log(1 - 12 * 905 / 28 + 57 - 11);
+console.log(1 - (12 * 905) / 28 + 57 - 11);
 //3
 console.log((4 + 6 + 9) / 77);
 //4
@@ -137,13 +136,12 @@ console.log(b);
 //5
 const max = 57;
 let actual = max - 13;
-let percentage = actual / max
+let percentage = actual / max;
 console.log(percentage);
 
-const min = 12; 
+const min = 12;
 
-
-// ASSIGNMENT: 
+// ASSIGNMENT:
 // Name the three ways to declare a variable
 
 // Ans: Var, let and const
@@ -177,8 +175,8 @@ const min = 12;
 // Ans: a++ and a--
 
 // Explain the difference between prefixing and postfixing increment/decrement operators.
-// Ans: prefixing: Return the old value after execute 
-// Ans: postfixing: Return the new value after execute 
+// Ans: prefixing: Return the old value after execute
+// Ans: postfixing: Return the new value after execute
 
 // What is operator precedence and how is it handled in JS?
 // Ans: From high to low:
@@ -206,7 +204,7 @@ const min = 12;
 //https://javascript.info/var
 //1. “var” has no block scope
 //Variables, declared with var, are either function-scoped or global-scoped. They are visible through blocks.
-//So if you declare a variable in an "if" block code with var type; 
+//So if you declare a variable in an "if" block code with var type;
 //it will remain access after you call it outside the block if
 //If you put a var type variable inside a code block and inside a function => it now become function-scoped not global-scoped, will only can access inside that function
 
@@ -230,3 +228,43 @@ The declaration is processed at the start of function execution (“hoisted”),
 //- But nowadays there’s no reason to write such code.
 
 console.log("Fundamentals Part 2");
+
+//Beign
+//when writing a string, you need to surround the value with quotes "" or '' or ``.
+const string = "The revolution will not be televised.";
+console.log(string);
+
+//The following will work if you previously defined the variable string
+const badstring = string;
+//badString is now set to have the same value as string.
+console.log(badstring);
+
+//Single quotes, double quotes, and backticks
+//You must use the same character for the start and end of a string, or you will get an error:
+//EX: const badQuotes = 'This is not allowed!";
+/*Strings declared using single quotes and 
+strings declared using double quotes are the same, 
+and which you use is down to personal preference - Bạn muốn chọn cái nào là việc của bạn*/
+
+/*
+Strings declared using backticks are a special kind of string called a template literal. In most ways, 
+template literals are like normal strings, but they have some special properties:
+
+    you can embed JavaScript (Search this in mdn web docs) in them
+    you can declare template literals (Search this in mdn web docs) over multiple lines
+*/
+
+//Embedding Javascript
+/*Inside a template literal, you can wrap JavaScript variables or expressions 
+inside ${ }, and the result will be included in the string:*/
+const namea = "Hello";
+const fullname = `${namea} World `;
+console.log(fullname);
+
+//You can also use the same technique to join together two variables:
+const one = "Hello";
+const two = "Guys";
+const joined = `${one} ${two}`;
+console.log(joined);
+
+//Concatenation in context
