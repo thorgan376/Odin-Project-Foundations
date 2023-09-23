@@ -267,4 +267,66 @@ const two = "Guys";
 const joined = `${one} ${two}`;
 console.log(joined);
 
-//Concatenation in context
+//Concatenation in context template literal
+// You have to look at the internal code in the HTML file
+/* const button = document.querySelector('.odd');
+
+function greet() {
+    const name = prompt("What is your name ?");
+    const greeting = document.querySelector("#greeting");
+    greeting.textContent = `Hello ${name}, 
+    it's very nice to see you!`;
+}
+
+button.addEventListener("click", greet); */
+//Concatenation using "+"
+const greetingb = "Hello";
+const nameb = "Chris";
+console.log(greetingb + ", " + nameb); // "Hello, Chris"
+
+// Including expressions in strings
+// Include Javascript expression in template literals
+const thesong = "The Man";
+const author = "Taylor Swift";
+const score = 9.5;
+const highestscore = 10;
+const output = `I like the song ${thesong} by ${author}. 
+I gave it a score of ${(score/highestscore)*100}%.`
+console.log(output);
+
+//Multiline strings
+const newlineA = `One day you 
+finally knew
+what you had
+to do, and began,`;
+console.log(newlineA);
+
+/*To have the equivalent output using a normal string 
+you'd have to include line break characters (\n) in the string:*/
+
+const newlineB = "One day you\nfinally knew\nwhat you had\nto do, and began,";
+console.log(newlineB);
+
+//Including quotes in strings
+//Use different character to declare the string, like "" or '' or ``
+const goodQuotes1 = 'She said "I think so!"';
+const goodQuotes2 = `She said "I'm not going in there!"`;
+console.log(goodQuotes1, goodQuotes2);
+/*Escape the problem quotation mark: Also means that we do
+something to them to make sure they are recognized as text
+, not part in the code => in javascript, we do this by 
+putting a backslash just before the character*/
+const bigmouth = 'You\'ve got no right to take my place…';
+console.log(bigmouth);
+//You can see "Escape sequences for more escape other special character
+
+//Number vs strings;
+/*1. Concatenate a string and a number => Work just fine. The browser 
+automatically converts the number to a string 
+and concatenate the two strings*/
+
+/*Number() and String() do they job as converter,
+ they convert the anything passed to it into its type*/
+
+
+
