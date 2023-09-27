@@ -328,5 +328,63 @@ and concatenate the two strings*/
 /*Number() and String() do they job as converter,
  they convert the anything passed to it into its type*/
 
+ //String length
+ let text1 ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ let length = text1.length;
+ console.log("Alphabet character string length is: " + length);
 
+ //Extracting String Parts:
+ //There are three methods for extracting a part of a string
+ /*
+ - slice(start, end)
+ - substring(start, end)
+ - substr(start, length)
+ */
+
+//slice()
+//extract a part of a string and returns the extracted part in a new string
+//The method takes 2 parameters: start position, end position ( end not include )
+//JavaScript counts positions from zero. first is 0, second is 1
+let text = "dajfhajodjs, askfoiwhnc, iaushven";
+let part0 = text.slice(9, 16);
+console.log(part0);
+//If you omit the second parameter, the method will slice out the rest of the string:
+let part1 = text.slice(9);
+console.log(part1);
+//If a parameter is negative, the position is counted from the end of the string:
+let part2 = text.slice(-9);
+console.log(part2);
+//This example slices out a portion of a string from position -12 to position -6: 
+let part3 = text.slice(-12,-9);
+console.log(part3);
+
+//substr(); deprecated
+//substring()
+/*substring() is similar to slice().
+The difference is that start and end values less than 0 are treated as 0 in substring().*/
+let part4 = text.substring(-9,12);
+console.log(part4);
+
+//Replacing String Content
+let replace = "Ohohoho"
+let textafter = text.replace("skfoiwh", replace);
+console.log(textafter);
+/*
+The replace() method does not change the string it is called on.
+
+The replace() method returns a new string.
+
+The replace() method replaces only the first match
+
+By default, the replace() method is case sensitive so writing Ohohoho will not work */
+let textafter2 = text.replace("SKFOIWH", "HAHA");
+console.log(textafter2);
+//To replace case insensitive, use a regular expression with an /i flag (insensitive):
+let textafter3 = text.replace(/SKFOIWH/i, "HAHA");
+console.log(textafter3);
+
+//to replaceAll match use a regular expression with a /g flag (global match):
+let text2 = "Hahaaiuhvoah, iahsHahaaojwd, Hahaisijv"
+let textafter4 = text2.replace(/Haha/g, "HAHA");
+console.log(textafter4);
 
