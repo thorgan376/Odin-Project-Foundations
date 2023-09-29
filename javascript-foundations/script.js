@@ -383,8 +383,20 @@ console.log(textafter2);
 let textafter3 = text.replace(/SKFOIWH/i, "HAHA");
 console.log(textafter3);
 
-//to replaceAll match use a regular expression with a /g flag (global match):
+//to replace all matches use a regular expression with a /g flag (global match):
 let text2 = "Hahaaiuhvoah, iahsHahaaojwd, Hahaisijv"
 let textafter4 = text2.replace(/Haha/g, "HAHA");
 console.log(textafter4);
 
+//ReplaceAll()
+/*The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.*/
+text6 = text.replaceAll("a","Dogs");
+text7 = text.replaceAll("a","dogs");
+text8 = text.replaceAll(/a/g,"Dogs");
+text9 = text.replaceAll(/a/g,"dogs");
+console.log(`text   is: ${text}
+text 6 is: ${text6}, 
+text 7 is: ${text7}, 
+text 8 is: ${text8}, 
+text 9 is: ${text9}`);
