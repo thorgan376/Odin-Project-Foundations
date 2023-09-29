@@ -484,3 +484,5 @@ console.log("Second array result [3]: "+ secondArray[3]);
 //an array of single characters:
 const thirdArray = textBFSplit.split("");
 console.log(thirdArray);
+
+//test commit
