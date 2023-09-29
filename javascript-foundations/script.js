@@ -388,3 +388,99 @@ let text2 = "Hahaaiuhvoah, iahsHahaaojwd, Hahaisijv"
 let textafter4 = text2.replace(/Haha/g, "HAHA");
 console.log(textafter4);
 
+//converting to uppercase and lowercase
+//toUpperCase();
+//toLowerCase();
+
+let beforeUpperOrLower = "i\'m hoàng thái sơn";
+let afterUpper = beforeUpperOrLower.toUpperCase();
+console.log(afterUpper)
+
+//similar to lower case
+let afterLower = afterUpper.toLowerCase();
+console.log(afterLower);
+
+//Joins two or more string
+//concat()
+let concatPart1 = "Xin chao, "
+let concatPart2 = "ban ten la gi ?"
+let concatAll = concatPart1.concat(concatPart2);
+console.log(concatAll);
+
+//can be used instead of the + operator
+//Ex:
+let concatPart3 = "Nhin" + " " + "tui" + " " + "day a ban";
+console.log(concatPart3);
+let concatPart4 = "Nhin".concat(" ","tui"," ","day a ban");
+let confirmTwo = (concatPart3 == concatPart4);
+console.log("concatPart3 == concatPart4 ? => " + confirmTwo);
+
+//Remove whitespace from both side of a string
+//trim()
+let removeWPTrim = "         Fuckkkk";
+let afterRemoveWPTrim = removeWPTrim.trim();
+console.log("removeWPTRim value: " + removeWPTrim+ "\nafterRemoveWPTRim value: " +afterRemoveWPTrim);
+
+//Works like trim but remove whitespace only form the start or endof a string
+//trimStart()
+let trimBefore = "   aklsjhf  aaasf      ";
+let trimStartAfterB = trimBefore.trimStart();
+console.log("trimStart():" + trimStartAfterB);
+//trimEnd()
+let trimEndAfter = trimBefore.trimEnd();
+console.log("trimEnd()  :" + trimEndAfter);
+
+//Javascript stringpadding
+//padStart(): pad a strings from the start
+let padString = "asjchkaw";
+let padStart1 = padString.padStart(13, "+");
+console.log("padStart():" + padStart1);
+//padEnd(): pad a strings from the end
+let padEnd1 = padString.padEnd(12, "-");
+console.log("padEnd()  :" +padEnd1);
+
+//Extracting String Characters
+//3 Methods
+//charAt(position)
+//charCodeAt(position)
+//Property acess []
+
+//Javascript String charAt():
+//the charAt() methos returns the character at a specified index (position) in a string
+let stringchar = "this is a long string";
+let charAtmethodString = stringchar.charAt(5);
+console.log("charAt() method result: " + charAtmethodString);
+
+//the charCodeAt() returns the unicode of the character at a specified index in a string:
+//the method returns a UTF-16 code (an interge between 0 and 65535).
+let charCodeAtMethod = stringchar.charCodeAt(12);
+console.log("charCodeAt() method result: " + charCodeAtMethod);
+
+//Property Acceess []
+//ECMAScript 5 (2009) allows property access [ ] on strings:
+let propertyAccess = stringchar[5];
+console.log("Property Acceess [] method result: " + propertyAccess);
+
+//It makes strings look like arrays (but they are not)
+//If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+//It is read only. str[0] = "A" gives no error (but does not work!)
+stringchar[0] = "A"; //no error
+console.log("After property access test: "+stringchar);
+
+//Converting a String to an Array
+//split()
+//split on commas
+let textBFSplit = "a,b,c,d,e,f";
+const firstArray = textBFSplit.split(",");
+console.log("First array result [2]: "+ firstArray[2]);
+
+//split on spacees
+let textBFSplit1 = "a b c,d e,f";
+const secondArray = textBFSplit1.split(" ");
+console.log("Second array result [3]: "+ secondArray[3]);
+
+//or anything you could use to split string in to array
+//If the separator is "", the returned array will be 
+//an array of single characters:
+const thirdArray = textBFSplit.split("");
+console.log(thirdArray);
