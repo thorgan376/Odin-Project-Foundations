@@ -499,3 +499,112 @@ console.log(thirdArray);
 
 //test commit
 //test commit 2
+
+//Comparing strings
+const str1 = "c";
+const str2 = "b";
+
+if (str1 < str2) {
+    // true
+    console.log(`${str1} is less than ${str2}`);
+  } else if (str1 > str2) {
+    console.log(`${str1} is greater than ${str2}`);
+  } else {
+    console.log(`${str1} and ${str2} are equal.`);
+  }
+
+  //compare strings case-insensitively => Convert both to the same case (Upper or lower) before comapring them
+
+function areEqualCaseInsensitively (str1, str2) {
+    console.log(str1.toUpperCase(), str2.toUpperCase());
+    return str1.toUpperCase() === str2.toUpperCase();
+}
+
+console.log(areEqualCaseInsensitively(str1, str2));
+//Remember: The choice of whether to transform by toUpperCase() or toLowerCase() is mostly arbitrary
+//, and neither one is fully robust when extending beyond the Latin alphabet.
+/*Example: Note recommend when using with German or Turkish*/
+
+//More to diving is to search: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_primitives_and_string_objects
+
+//String object
+const strObj = new String("motivation");
+console.log(typeof strObj);
+
+/*String primitives and String Object also give 
+different results when using eval(). 
+Primitives passed to eval are treated as source code; 
+String objects are treated as all other objects are, 
+by returning the object. For example: */
+
+/*const s1 = "2 + 2"; // creates a string primitive
+const s2 = new String("2 + 2"); // creates a String object
+console.log(eval(s1)); // returns the number 4
+console.log(eval(s2)); // returns the string "2 + 2"
+*/
+
+/*For these reasons, the code may break when 
+it encounters String objects when it expects 
+a primitive string instead, although generally,
+ authors need not worry about the distinction. */
+
+ /*A String object can always be converted to its 
+ primitive counterpart with the valueOf() method.  */
+ const s2 = new String("2 + 2");
+ console.log(eval(s2.valueOf()));
+
+ 
+
+ //String coercion: 
+ /*Strings are returned as-is
+ undefined turns into "undefined"
+ null turns into "null"
+ true turns into "true", false turns into "false"
+ Number and BigInts are converted with the same algorithm as toString(10).
+ Symbols throw a TypeError
+ Objects are first converted to a primitive by calling it [@@toPrimitive]() (with "string" as hint)
+ , to String(). and valueOf() methods. The resulting primitive is then converted to a string. */
+
+ //Other ways:
+ /* 
+- Template literals: `${x} == the string coercion for the embedded expressions` (Recommended)
+- String() function: String(x), except that Symbols don't throw a TypeError, but return a 
+ "Symbol(description) where description is the description of the symbols" (Recommended)
+- Using the + operator: "" + x coerces its operand to a primitive instead of 
+a string, and, for some objects, has entirely different behaviors from normal 
+string coercion. (Should not use)
+ */
+
+/* More infomation about:
+UTF-16 characters, Unicode code points, and grapheme clusters 
+can see in this link :
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion*/
+
+console.log("👨‍👦".split(""));
+//splits into array of four surrogates
+
+//Constructor: String()
+/* Creates a new String object. It performs type conversion 
+when called as a function, rather than as a constructor, 
+which is usually more useful. */
+
+//Static method: 
+/*
+String.fromCharCode():
+- Returns a string created by using the specified sequence of Unicode values.
+String.fromCodePoint():
+- Returns a string created by using the specified sequence of code points.
+String.raw():
+- Returns a string created from a raw template string. */
+
+//Instance properties
+//String.prototype.constructor
+//length (read-only)
+
+//Instance methods: etc... (a lot - you show find it when you need it, not now)
+/* 
+.endsWith(): Determines whether a string ends with the characters of the string you want to search
+.includes(): Determines whether the calling string contains the string you want
+.indexOf(): 
+.isWellFormed()
+( And a lot of them to play with )*/
