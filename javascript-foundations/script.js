@@ -498,3 +498,4 @@ const thirdArray = textBFSplit.split("");
 console.log(thirdArray);
 
 //test commit
+//test commit 2
