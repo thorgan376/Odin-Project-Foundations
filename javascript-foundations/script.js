@@ -662,5 +662,11 @@ console.log(`The difference after all of a1 and b1: ${a1 == b1}`); //True!!! In 
 console.log(`The differentiate of 0 and false: ${0 == false}`);
 //The samething happens with an empty string:
 console.log(`The differentiate of '' and false: ${'' == false}`);
+// => This happens because operands of different types are converted
+// to numbers by the equality operator ==. An empty string, just like 
+// false, becomes a zero.
 
-
+//A strict equality operator === check the equality WITHOUT type conversion
+console.log(`Is 0 equal to false, let's check: ${0 === false}`);
+//false, because the types are different
+//There is also a “strict non-equality” operator !== analogous to !=.
