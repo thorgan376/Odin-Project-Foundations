@@ -634,3 +634,33 @@ The first the greater*/
 
 //Remmember: In case sensitive: lower case is greater than Uppercase
 /* Because the lower case character has a greater index in the internal encoding table Javascript use (Unicode) */
+
+//Compare of different types
+// alert('185397' == 185397);
+// alert(`This is not what call a equality expression: ${true == 1}`);
+
+//A funny consequence: 
+//- Two values are equal
+//- One of them is true as a boolean and the other one is false as a boolean.
+let a1 = 0;
+console.log(`Boolean a1 is this: ? ${Boolean(a1)}`); //False
+
+let b1 = "0"; 
+
+//In this time, a string with only 0 is the character is generate:
+//Also 0 in UTF-16 == 48 > 1 equal true
+console.log(`b1.charCodeAt(0) is this: ${b1.charCodeAt(0)}`);
+
+console.log(`Is that boolean b1: ? ${Boolean(b1)}`); //True
+
+console.log(`The difference after all of a1 and b1: ${a1 == b1}`); //True!!! In theory, must be false, but in CS is true
+//An equality check converts values using the numeric conversion (hence "0" becomes 0), 
+//while the explicit Boolean conversion uses another set of rules.
+
+//Strict Equality
+// == cannot tell differentiate 0 from false :
+console.log(`The differentiate of 0 and false: ${0 == false}`);
+//The samething happens with an empty string:
+console.log(`The differentiate of '' and false: ${'' == false}`);
+
+
