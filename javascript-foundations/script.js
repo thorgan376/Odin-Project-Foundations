@@ -670,3 +670,71 @@ console.log(`The differentiate of '' and false: ${'' == false}`);
 console.log(`Is 0 equal to false, let's check: ${0 === false}`);
 //false, because the types are different
 //There is also a “strict non-equality” operator !== analogous to !=.
+
+//COMPARE with null and undefined
+//There’s a non-intuitive behavior when null or undefined are compared to other values.
+
+console.log("   COMPARE WITH NULL AND UNDIFINED: ");
+
+//For a strict strict equality check ===
+//These values are different, because each of them is a different type.
+console.log(`null === undefined ???: ${null === undefined}`);
+
+//For a non-strict check ==
+//There’s a special rule. These two are a “sweet couple”: 
+//they equal each other (in the sense of ==), but not any other value.
+console.log(`null == undefined ???: ${null == undefined}`);
+
+//For maths and other comparisons < > <= >=
+//both are converted to number: null => 0; undefined => NaN.
+// ==> Very funny when apply this rule, but don't fall into that trap of them
+
+console.log("   Strange result null vs 0: ");
+//TH1: Strange result null vs 0
+console.log(`What if: null > 0: ${null > 0}`); //false(1)
+console.log(`What if: null == 0: ${null == 0}`); //false(2)
+console.log(`What if: null >= 0: ${null >= 0}`); //true(3)
+
+/*
+Mathematically, that’s strange. The last result states 
+that "null is greater than or equal to zero", so in one of 
+the comparisons above it must be true, but they are both false.
+
+The reason is that an equality check == and 
+comparisons > < >= <= work differently. 
+Comparisons convert null to a number, treating it as 0. 
+That’s why (3) null >= 0 is true and (1) null > 0 is false.
+
+On the other hand, the equality check == for 
+undefined and null is defined such that, without any conversions, 
+they equal each other and don’t equal anything else. 
+That’s why (2) null == 0 is false.
+ */
+
+console.log("   An incomparable undefined: ");
+//The value undefined shouldn’t be compared to other values:
+console.log(`What if: undefined > 0: ${undefined > 0}`); //false(1)
+console.log(`What if: undefined < 0: ${undefined < 0}`); //false(2)
+console.log(`What if: undefined == 0: ${undefined == 0}`); //false(3)
+//(1) and (2) False because undefined gets converted to NaN 
+//and NaN is a special numeric value for all comparisons.
+
+//(3) False because undefined only equals to null, undefined, and no other value.
+
+//AVOID PROBLEM BETWEEN NULL AND UNDEFINED
+console.log("   AVOID PROBLEM: read the comment in the code");
+/*
+  - Treat any comparison with undefined/null 
+  except the strict equality === with exceptional care.
+  - Don’t use comparisons >= > < <= with a variable which 
+  may be null/undefined, unless you’re really sure 
+  of what you’re doing. If a variable can have these values, 
+  check for them separately.
+ */
+
+
+
+
+
+
+
