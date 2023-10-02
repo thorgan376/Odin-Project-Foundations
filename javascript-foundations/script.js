@@ -745,6 +745,38 @@ console.log("   SUMMARY OF COMPARISON PART: read the comment in the code");
   Checking for null/undefined separately is a good idea.
 */
 
+//TASKS
+console.log("   TASK:");
+//Task 1: 
+console.log(`5 > 4 : ${5 > 4}`); //true: Correct
+//Obviously, true.
 
+//Task 2: 
+console.log(`"apple" > "pineapple" : ${"apple" > "pineapple"}`); 
+//false - Correct
+//Dictionary comparison, hence false. "a" is smaller than "p".
 
+//Task 3: 
+console.log(`"2" > "12" : ${"2" > "12"}`); 
+//false - Incorrect: Must be True
+//Again, dictionary comparison, first char "2" is greater than the first char "1".
 
+//Task 4:
+console.log(`undefined == null : ${undefined == null}`); 
+//true - Correct
+//Values null and undefined equal each other only.
+
+//Task 5:
+console.log(`undefined === null : ${undefined === null}`); 
+//false - Correct
+//Strict equality is strict. Different types from both sides lead to false.
+
+//Task 6: 
+console.log(`null == "\n0\n" : ${null == "\n0\n"}`); 
+//false - Correct
+//Similar to (4), null only equals undefined.
+
+//Task 7: 
+console.log(`null === +"\n0\n" : ${null === +"\n0\n"}`); 
+//true -- Incorrect
+//Strict equality of different types. Type of null in Javascript is an Object
