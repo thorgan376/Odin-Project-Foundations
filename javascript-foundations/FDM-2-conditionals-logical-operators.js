@@ -69,3 +69,26 @@ console.log( null || 1 ); // 1 (1 is the first truthy value)
 console.log( null || 0 || 1 ); // 1 (the first truthy value)
 
 console.log( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+//1. Getting the first truthy value from a list of variables or expressions.
+console.log(`       1. Getting the first truthy value from a list of variables or expressions : 
+(Look into the code to understand)`);
+let alcohol1 = "";
+let alcohol2 = "";
+let alcohol3 = "Whiskey";
+console.log(alcohol1 || alcohol2 || alcohol3 || "Fuck u");
+//If all variables were falsy, "Fuck u" would show up.
+
+//2. Short circuit evaluation
+console.log("       2. Short circuit evaluation : (Look into the code to understand)");
+/*Another feature of OR || operator is the so-called “short-circuit” evaluation.
+
+It means that || processes its arguments until the first truthy value is reached, and then the value is returned immediately, without even touching the other argument.
+
+The importance of this feature becomes obvious if an operand isn’t just a value, but an expression with a side effect, such as a variable assignment or a function call.
+
+In the example below, only the second message is printed: */
+true || console.log("not printed");
+false || console.log("printed");
+/*In the first line, the OR || operator stops the evaluation immediately upon seeing true, so the alert isn’t run.
+
+=>>>>>>>> Sometimes, people use this feature to execute commands only if the condition on the left part is falsy. */
