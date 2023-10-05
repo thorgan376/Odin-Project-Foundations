@@ -38,7 +38,7 @@ let b1 = "0";
 
 //In this time, a string with only 0 is the character is generate:
 //Also 0 in UTF-16 == 48 > 1 equal true
-console.log(`b1.charCodeAt(0) is this: ${b1.charCodeAt(0)}`);
+console.log(`b1.charCodeAt(0) is this: ${b1.charCodeAt(0)}`); //48
 
 console.log(`Is that boolean b1: ? ${Boolean(b1)}`); //True
 
@@ -169,3 +169,35 @@ console.log(`null == "\n0\n" : ${null == "\n0\n"}`);
 console.log(`null === +"\n0\n" : ${null === +"\n0\n"}`); 
 //true -- Incorrect
 //Strict equality of different types. Type of null in Javascript is an Object
+
+
+//////////JavaScript if, else, and else if///////////
+console.log("   JAVASCRIPT IF, ELSE, AND ELSE IF");
+//Conditional statements are used to perform different actions based on different conditions.
+
+console.log("     Conditional Statements :");
+/*
+- Use IF to specify a block of code to be executed, if a specified condition is true
+- Use ELSE to specify a block of code to be executed, if the same condition is false
+- Use ELSE IF to specify a new condition to test, if the first condition is false
+- Use SWITCH to specify many alternative blocks of code to be executed
+*/
+
+const d = new Date();
+let hour = 19;
+console.log(`The hour now is: ${hour}`)
+if (hour < 18) {
+  greeting = "Good day";
+  console.log("     The if Statement :");
+  console.log(greeting);
+} 
+else if (hour < 10) {
+  console.log("     The else if Statement :");
+  console.log("Good Evening");
+} 
+else {
+  console.log("     The else Statement :");
+  console.log("Good evening");
+} 
+
+

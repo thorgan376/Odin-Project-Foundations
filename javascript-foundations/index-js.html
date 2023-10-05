@@ -147,6 +147,20 @@
     randomNumber = Math.floor(Math.random() * 100) + 1;
   }
 </script>
+
+<h1> A Random Javascript link</h1>
+<p>Using Math.random()</p>
+
+<p id="demo"></p>
+<script>
+  if(Math.random() < 0.5) {
+    text = `<a href="https://www.facebook.com/thaison.purpleguy">Visit my Facebook profile</a>`
+  } else {
+    text = `<a href="http://127.0.0.1:5501/">Return back to My Foundation Main Page</a>`
+  }
+
+  document.getElementById("demo").innerHTML = text;
+</script>
 </body>
 
 </html>
