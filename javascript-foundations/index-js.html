@@ -38,12 +38,13 @@
     <h1>This is Javascript Page</h1>
     <h1>Press F12 or Ctrl + Shift + C to open Console</h1>
     
-    <!-- File javascript in here :-->
     <script src="FDM-1.js"></script>
-    <script src="FDM-2-Strings.js"></script>
-    <script src="FDM-2-conditionals.js"></script>
-    <!-- End of declare file -->
-    
+    <script src="FDM-2-strings.js"></script>
+    <script src="FDM-2-conditionals-comparison.js"></script>
+    <script src="FDM-2-conditionals-if-else-elseif.js"></script>
+    <script src="FDM-2-conditionals-switch.js"></script>
+    <script src="FDM-2-conditionals-logical-operators.js"></script>
+
     <p>Excercise practice: </p>
 
     <button class="odd">Press me pls</button>
@@ -147,6 +148,21 @@
     randomNumber = Math.floor(Math.random() * 100) + 1;
   }
 </script>
+
+<h1> A Random Javascript link</h1>
+<p>Using Math.random()</p>
+
+<p id="demo"></p>
+<script>
+  if(Math.random() < 0.5) {
+    text = `<a href="https://www.facebook.com/thaison.purpleguy">Visit my Facebook profile</a>`
+  } else {
+    text = `<a href="http://127.0.0.1:5501/">Return back to My Foundation Main Page</a>`
+  }
+
+  document.getElementById("demo").innerHTML = text;
+</script>
+
 </body>
 
 </html>
