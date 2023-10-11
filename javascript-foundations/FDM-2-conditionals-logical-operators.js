@@ -88,7 +88,89 @@ The importance of this feature becomes obvious if an operand isn’t just a valu
 
 In the example below, only the second message is printed: */
 true || console.log("not printed");
-false || console.log("printed");
+false || console.log(`"printed" because false is first before ||`);
 /*In the first line, the OR || operator stops the evaluation immediately upon seeing true, so the alert isn’t run.
 
 =>>>>>>>> Sometimes, people use this feature to execute commands only if the condition on the left part is falsy. */
+
+console.log("     && AND :");
+//The AND Operator is represented with two ampersands 
+
+//Ex: result = a && b;
+
+//In classical programming, AND returns true IF BOTH OPERANDS ARE TRUTHY and false otherwise:
+//Look at this example below:
+console.log(`true && true is: ${true && true}`);
+console.log(`false && true is: ${false && true}`);
+console.log(`true && false is: ${true && false}`);
+console.log(`false && false is: ${false && false}`);
+
+//An example with if;
+let hourAnd = 11;
+let minuteAnd = 31;
+if (hourAnd <= 12 && minuteAnd > 30) {
+    console.log(`It's true`);
+} else {
+    console.log(`It's false`);
+}
+//Just as with OR, any value is allowed as an operand of AND:
+if(1 && 0) {console.log(`"won't work, because the result is falsy"`)}
+else {console.log(`Damn it's false`)}
+
+//AND "&&" finds the first falsy value
+console.log(`     AND "&&" finds the first falsy value`);
+//EX: result = value1 && value2 && value3;
+
+/*
+The AND && operator does the following:
+
+    Evaluates operands from left to right.
+    For each operand, converts it to a boolean. If the result is false, stops and returns the original value of that operand.
+    If all operands have been evaluated (i.e. all were truthy), returns the last operand.
+
+In other words, AND returns the first falsy value or the last value if none were found.
+
+The rules above are similar to OR. The difference is that AND returns the first falsy value while OR returns the first truthy one. */
+//Examples:
+//if the first operand is truthy
+//AND returns the second operand
+console.log(`1 && 0 is: ${1 && 0}`);//false => return the original value of that false operand: 0
+console.log(`1 && 5 is: ${1 && 5}`);//truthy => reutrn 5 - last value
+
+//if the first operand is falsy
+//AND returns it. The second operand is ignored
+console.log(`null && 5: ${null && 5}`); //null and 5 is ignored
+console.log(`0 && "no matter what": ${0 && "no matter what"}`)//ignored the last one
+
+//We can also pass several values in a row. See how the first falsy one
+//is returned:
+console.log(`1 && 2 && null && 3: ${1 && 2 && null && 3}`);//null
+//When all value are truthy, the last value is returned
+console.log(`1 && 2 && 3: ${1 && 2 && 3}`);//3, the last one
+
+//Remember: Precedence of AND && is higher than OR ||
+console.log(`     Precedence of AND && is higher than OR ||`);
+console.log(`Ex: a && b || c && d is the same with (a && b) || (c && d)`);
+
+//Don't replace if with || or &&: 
+console.log(`     Don't replace if with || or &&: `);
+/*
+Sometimes, people use the AND && operator as a "shorter way to write if".
+
+For instance:
+
+    let x = 1;
+    (x > 0) && alert( 'Greater than zero!' );
+
+The action in the right part of && would execute only 
+if the evaluation reaches it. That is, only if (x > 0) is true.
+
+So we basically have an analogue for:
+
+    let x = 1;
+    if (x > 0) alert( 'Greater than zero!' );
+
+Although, the variant with && appears shorter, 
+if is more obvious and tends to be a little bit more readable. 
+So we recommend using every construct for its purpose: 
+use if if we want if and use && if we want AND. */
