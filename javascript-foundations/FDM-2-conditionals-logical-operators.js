@@ -174,3 +174,92 @@ Although, the variant with && appears shorter,
 if is more obvious and tends to be a little bit more readable. 
 So we recommend using every construct for its purpose: 
 use if if we want if and use && if we want AND. */
+
+console.log("     ! (NOT) :");
+//The boolean NOT operator is represented with an exclamation sign !.
+
+//The syntax is pretty simple:
+//Ex: result = !value;
+
+/*
+The operator accepts a single argument and does the following:
+
+    Converts the operand to boolean type: true/false.
+    Returns the inverse value. true => false or false to true
+
+For instance:
+*/
+console.log(`!true = ${!true}`);//false
+console.log(`!0 = ${!0}`);//true
+
+//A double NOT !! is sometimes used for converting a value to boolean type:
+console.log(`     Double NOT !!: converting a value to boolean type:`);
+console.log(`!!"non-empty string" = ${!!"non-empty string"}`);//true
+console.log(`!!null = ${!!null}`);//false
+/*
+That is, the first NOT converts the value to boolean and returns the inverse, and the second NOT inverses it again. In the end, 
+we have a plain value-to-boolean conversion.
+*/
+//There’s a little more verbose way to do the same thing – a built-in Boolean function:
+console.log(`Boolean("non-empty string") = ${Boolean("non-empty string")}`)//true
+console.log(`Boolean(null) = ${Boolean(null)}`)//false
+
+//The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.
+console.log(`     The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.`);
+
+console.log(`     TASKS:`);
+//What's the result of OR?
+console.log(`       What's the result of OR ?`);
+console.log(`null || 2 || undefined = ${null || 2 || undefined}`); //2 => Correct - that’s the first truthy value.
+//What's the result of OR'ed alerts?
+console.log(`       What's the result of OR'ed alerts ?`);
+console.log(`alert(1) || 2 || alert(3) = ${alert(alert(1) || 2 || alert(3))}`);//alert(1) then alert 2 ignore alert(3)=> Incorrect
+
+/*
+The call to alert does not return a value. Or, in other words, it returns undefined.
+
+    The first OR || evaluates its left operand alert(1). That shows the first message with 1.
+    The alert returns undefined, so OR goes on to the second operand searching for a truthy value.
+    The second operand 2 is truthy, so the execution is halted, 2 is returned and then shown by the outer alert.
+
+There will be no 3, because the evaluation does not reach alert(3). */
+
+//What is the result of AND?
+console.log(`       What is the result of AND?`);
+console.log(`alert( 1 && null && 2) = ${alert(1 && null && 2)}`);//null => Correct
+//The answer: null, because it’s the first falsy value from the list.
+
+//What is the result of AND'ed alerts?
+console.log(`       What is the result of AND'ed alerts?`);
+console.log(`alert( alert(1) && alert(2)) = ${alert( alert(1) && alert(2))}`);
+//undefined => Incorrect => alert(1) then alert undefined
+/*
+The call to alert returns undefined (it just shows a message, so there’s no meaningful return).
+
+Because of that, && evaluates the left operand (outputs 1), and immediately stops,
+because undefined is a falsy value. And && looks for a falsy value 
+and returns it, so it’s done. */
+
+//The result of OR AND OR
+console.log(`       The result of OR AND OR`)
+console.log(`alert( null || 2 && 3 || 4 ) = ${alert( null || 2 && 3 || 4 )}`);//3 => Correct
+/*
+The precedence of AND && is higher than ||, so it executes first.
+The result of 2 && 3 = 3, so the expression becomes:
+    null || 3 || 4
+Now the result is the first truthy value: 3.
+*/
+
+//Change the range between 
+/*
+Write an if condition to check that age is between 14 and 90 inclusively.
+
+“Inclusively” means that age can reach the edges 14 or 90.
+
+ */
+console.log(`Read the code inside the IDE`);
+let ageTaskRange = 56;
+if ( ageTaskRange >= 14 && ageTaskRange <= 90 ) {
+    console.log(`The if is: if(ageTaskRange >= 14 && ageTaskRange <= 90)`);
+}
+//Good, you make it right => Correct
