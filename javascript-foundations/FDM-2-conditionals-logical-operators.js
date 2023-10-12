@@ -301,7 +301,7 @@ What will the results of the expressions be inside if(...)? */
 if(-1 || 0) console.log('first'); 
 //Not gonna execute; The result inside if() is false || false => false (Incorrect)
 if(-1 && 0) console.log(`second`); 
-//Not gonna execute; The result inside if() is false && false => false (Correct)
+//Not gonna execute; The result inside if() is false && false => false (Incorrect)
 if(null || -1 && 1) console.log(`third`); 
 //Not gonna execute; The result inside if() is false || (false && true) => false (Incorrect)
 
@@ -314,3 +314,44 @@ so -1 && 1 executes first, giving us the chain:
 null || -1(true) && 1(true)  ->  null || 1(return the last value if both operand in && is true)  
 ->  1 => truthy
 */
+
+//Check the login
+console.log(`       Task 9: Check the login`);
+
+// fetch("index-js.html").then(r=>r.text()).then((html)=>{ // get the content of products.html
+//     let element = document.createElement("html");
+//     element.innerHTML = html; // parse the html
+//     const buttonLoginPrompt = element.querySelector(".active-the-login-prompt");
+
+//     loginPrompt();
+//     buttonLoginPrompt.addEventListener('click', loginPrompt);
+
+//     function loginPrompt() {
+    const promptVariable = prompt(`Who's there ?`);
+    if(promptVariable == "Admin") {
+        console.log(promptVariable); 
+        const password = prompt(`Password ?`);
+        if(password == "TheMaster") {
+            console.log("Welcome!");
+        } else if(password == "" || password == undefined) {
+            console.log("Canceled");
+        } else {
+            console.log("Wrong password");
+        }
+    } else if(promptVariable == "" || promptVariable == undefined) {
+        console.log("Canceled");
+    } else {
+        console.log("I don't know you");
+}
+//     }
+
+    
+//     console.log(buttonLoginPrompt);
+// });
+//const buttonLoginPrompt = document.querySelector('button[class="active-the-login-prompt"]');
+//console.log(buttonLoginPrompt);
+
+
+
+//Yay, you do it 95% correct, 5% left is just to change from == to ===
+//It's more secure and optimize

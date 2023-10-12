@@ -226,7 +226,3 @@ The declaration is processed at the start of function execution (“hoisted”),
 
 //4. IIFE - “immediately-invoked function expressions”:
 //- But nowadays there’s no reason to write such code.
-<<<<<<< HEAD
-
-=======
->>>>>>> 0cc86a7b1eb6987b7743a0b3d9c84704185de5a8
