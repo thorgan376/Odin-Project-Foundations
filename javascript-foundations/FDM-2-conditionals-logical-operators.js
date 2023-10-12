@@ -219,10 +219,10 @@ console.log(
 
 console.log(`     TASKS:`);
 //What's the result of OR?
-console.log(`       What's the result of OR ?`);
+console.log(`       Task 1: What's the result of OR ?`);
 console.log(`null || 2 || undefined = ${null || 2 || undefined}`); //2 => Correct - that’s the first truthy value.
 //What's the result of OR'ed alerts?
-console.log(`       What's the result of OR'ed alerts ?`);
+console.log(`       Task 2: What's the result of OR'ed alerts ?`);
 //Uncomment this: console.log(`alert(1) || 2 || alert(3) = ${alert(alert(1) || 2 || alert(3))}`);//alert(1) then alert 2 ignore alert(3)=> Incorrect
 
 /*
@@ -235,13 +235,13 @@ The call to alert does not return a value. Or, in other words, it returns undefi
 There will be no 3, because the evaluation does not reach alert(3). */
 
 //What is the result of AND?
-console.log(`       What is the result of AND?`);
+console.log(`       Task 3: What is the result of AND?`);
 console.log(`Uncomment// the Code here`);
 //console.log(`alert( 1 && null && 2) = ${alert(1 && null && 2)}`);//null => Correct
 //The answer: null, because it’s the first falsy value from the list.
 
 //What is the result of AND'ed alerts?
-console.log(`       What is the result of AND'ed alerts?`);
+console.log(`       Task 4: What is the result of AND'ed alerts?`);
 console.log(`Uncomment// the Code here`);
 //console.log(`alert( alert(1) && alert(2)) = ${alert( alert(1) && alert(2))}`);
 //undefined => Incorrect => alert(1) then alert undefined
@@ -253,7 +253,7 @@ because undefined is a falsy value. And && looks for a falsy value
 and returns it, so it’s done. */
 
 //The result of OR AND OR
-console.log(`       The result of OR AND OR`);
+console.log(`       Task 5: The result of OR AND OR`);
 console.log(`Uncomment// the Code here`);
 //console.log(`alert( null || 2 && 3 || 4 ) = ${alert( null || 2 && 3 || 4 )}`);//3 => Correct
 /*
@@ -263,7 +263,8 @@ The result of 2 && 3 = 3, so the expression becomes:
 Now the result is the first truthy value: 3.
 */
 
-//Change the range between
+//Task 5: Change the range between
+console.log(`       Task 6: Change the range between`);
 /*
 Write an if condition to check that age is between 14 and 90 inclusively.
 
@@ -278,7 +279,7 @@ if (ageTaskRange >= 14 && ageTaskRange <= 90) {
 //Good, you make it right => Correct
 
 //Check the range outside
-console.log(`       Check the range outside`);
+console.log(`       Task 7: Check the range outside`);
 if (!(ageTaskRange >= 14) && ageTaskRange >= 90) {
   console.log(`The if 2 is: if(ageTaskRange >= 14 && ageTaskRange <= 90)`);
 } else {
@@ -289,5 +290,27 @@ if (!(ageTaskRange >= 14) && ageTaskRange >= 90) {
 if (!(ageTaskRange >= 14 && ageTaskRange <= 90)) {
 }
 //OR
-if ( age < 14 || age > 90) {
+if ( ageTaskRange < 14 || ageTaskRange > 90) {
 }
+
+//
+console.log(`       Task 8: A question about "if"`);
+/*
+Which of these alerts are going to execute?
+What will the results of the expressions be inside if(...)? */
+if(-1 || 0) console.log('first'); 
+//Not gonna execute; The result inside if() is false || false => false (Incorrect)
+if(-1 && 0) console.log(`second`); 
+//Not gonna execute; The result inside if() is false && false => false (Correct)
+if(null || -1 && 1) console.log(`third`); 
+//Not gonna execute; The result inside if() is false || (false && true) => false (Incorrect)
+
+//The answer: The first and the third will execute
+/*
+1. Boolean(-1) = true => First ( -1 || 0) = -1 truthy => Execute
+2. && find the first falsy => -1 && 0 => true && false => false => Not execute
+3. && have the higher precedence than || 
+so -1 && 1 executes first, giving us the chain:
+null || -1(true) && 1(true)  ->  null || 1(return the last value if both operand in && is true)  
+->  1 => truthy
+*/
