@@ -21,8 +21,9 @@ As we can see, the result is always true except for the case when both operands 
 If an operand is not a boolean, it’s converted to a boolean for the evaluation.
 
 For instance, the number 1 is treated as true, the number 0 as false: */
-if (1 || 0) { // works just like if( true || false )
-   console.log(`1 || 0 is truthy!`);
+if (1 || 0) {
+  // works just like if( true || false )
+  console.log(`1 || 0 is truthy!`);
 }
 
 /*Most of the time, OR || is used in an if statement to test if any of the given conditions is true.
@@ -30,19 +31,21 @@ if (1 || 0) { // works just like if( true || false )
 For example: */
 let hourInLO = 9;
 
-if(hourInLO < 10 || hourInLO > 18) {
-    console.log("The office is closed")
+if (hourInLO < 10 || hourInLO > 18) {
+  console.log("The office is closed");
 }
 
 //Or we can pass more conditions :
 let hourInLO2 = 12;
 let isWeekend = true;
 if (hourInLO2 < 10 || hourInLO2 > 18 || isWeekend) {
-    console.log("The office is closed"); //Because it's the weekend
+  console.log("The office is closed"); //Because it's the weekend
 }
 
 //OR "||" finds the first truthy value
-console.log(`       OR "||" finds the first truthy value : (Look into the code to understand)`);
+console.log(
+  `       OR "||" finds the first truthy value : (Look into the code to understand)`
+);
 /*
 The logic described above is somewhat classical. Now, let’s bring in the “extra” features of JavaScript.
 
@@ -63,12 +66,12 @@ A value is returned in its original form, without the conversion.
 In other words, a chain of OR || returns the first truthy value or the last one if no truthy value is found.
 
 For instance: */
-console.log( 1 || 0 ); // 1 (1 is truthy)
+console.log(1 || 0); // 1 (1 is truthy)
 
-console.log( null || 1 ); // 1 (1 is the first truthy value)
-console.log( null || 0 || 1 ); // 1 (the first truthy value)
+console.log(null || 1); // 1 (1 is the first truthy value)
+console.log(null || 0 || 1); // 1 (the first truthy value)
 
-console.log( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+console.log(undefined || null || 0); // 0 (all falsy, returns the last value)
 //1. Getting the first truthy value from a list of variables or expressions.
 console.log(`       1. Getting the first truthy value from a list of variables or expressions : 
 (Look into the code to understand)`);
@@ -79,7 +82,9 @@ console.log(alcohol1 || alcohol2 || alcohol3 || "Fuck u");
 //If all variables were falsy, "Fuck u" would show up.
 
 //2. Short circuit evaluation
-console.log("       2. Short circuit evaluation : (Look into the code to understand)");
+console.log(
+  "       2. Short circuit evaluation : (Look into the code to understand)"
+);
 /*Another feature of OR || operator is the so-called “short-circuit” evaluation.
 
 It means that || processes its arguments until the first truthy value is reached, and then the value is returned immediately, without even touching the other argument.
@@ -94,7 +99,7 @@ false || console.log(`"printed" because false is first before ||`);
 =>>>>>>>> Sometimes, people use this feature to execute commands only if the condition on the left part is falsy. */
 
 console.log("     && AND :");
-//The AND Operator is represented with two ampersands 
+//The AND Operator is represented with two ampersands
 
 //Ex: result = a && b;
 
@@ -109,13 +114,16 @@ console.log(`false && false is: ${false && false}`);
 let hourAnd = 11;
 let minuteAnd = 31;
 if (hourAnd <= 12 && minuteAnd > 30) {
-    console.log(`It's true`);
+  console.log(`It's true`);
 } else {
-    console.log(`It's false`);
+  console.log(`It's false`);
 }
 //Just as with OR, any value is allowed as an operand of AND:
-if(1 && 0) {console.log(`"won't work, because the result is falsy"`)}
-else {console.log(`Damn it's false`)}
+if (1 && 0) {
+  console.log(`"won't work, because the result is falsy"`);
+} else {
+  console.log(`Damn it's false`);
+}
 
 //AND "&&" finds the first falsy value
 console.log(`     AND "&&" finds the first falsy value`);
@@ -134,25 +142,25 @@ The rules above are similar to OR. The difference is that AND returns the first 
 //Examples:
 //if the first operand is truthy
 //AND returns the second operand
-console.log(`1 && 0 is: ${1 && 0}`);//false => return the original value of that false operand: 0
-console.log(`1 && 5 is: ${1 && 5}`);//truthy => reutrn 5 - last value
+console.log(`1 && 0 is: ${1 && 0}`); //false => return the original value of that false operand: 0
+console.log(`1 && 5 is: ${1 && 5}`); //truthy => reutrn 5 - last value
 
 //if the first operand is falsy
 //AND returns it. The second operand is ignored
 console.log(`null && 5: ${null && 5}`); //null and 5 is ignored
-console.log(`0 && "no matter what": ${0 && "no matter what"}`)//ignored the last one
+console.log(`0 && "no matter what": ${0 && "no matter what"}`); //ignored the last one
 
 //We can also pass several values in a row. See how the first falsy one
 //is returned:
-console.log(`1 && 2 && null && 3: ${1 && 2 && null && 3}`);//null
+console.log(`1 && 2 && null && 3: ${1 && 2 && null && 3}`); //null
 //When all value are truthy, the last value is returned
-console.log(`1 && 2 && 3: ${1 && 2 && 3}`);//3, the last one
+console.log(`1 && 2 && 3: ${1 && 2 && 3}`); //3, the last one
 
 //Remember: Precedence of AND && is higher than OR ||
 console.log(`     Precedence of AND && is higher than OR ||`);
 console.log(`Ex: a && b || c && d is the same with (a && b) || (c && d)`);
 
-//Don't replace if with || or &&: 
+//Don't replace if with || or &&:
 console.log(`     Don't replace if with || or &&: `);
 /*
 Sometimes, people use the AND && operator as a "shorter way to write if".
@@ -189,23 +197,25 @@ The operator accepts a single argument and does the following:
 
 For instance:
 */
-console.log(`!true = ${!true}`);//false
-console.log(`!0 = ${!0}`);//true
+console.log(`!true = ${!true}`); //false
+console.log(`!0 = ${!0}`); //true
 
 //A double NOT !! is sometimes used for converting a value to boolean type:
 console.log(`     Double NOT !!: converting a value to boolean type:`);
-console.log(`!!"non-empty string" = ${!!"non-empty string"}`);//true
-console.log(`!!null = ${!!null}`);//false
+console.log(`!!"non-empty string" = ${!!"non-empty string"}`); //true
+console.log(`!!null = ${!!null}`); //false
 /*
 That is, the first NOT converts the value to boolean and returns the inverse, and the second NOT inverses it again. In the end, 
 we have a plain value-to-boolean conversion.
 */
 //There’s a little more verbose way to do the same thing – a built-in Boolean function:
-console.log(`Boolean("non-empty string") = ${Boolean("non-empty string")}`)//true
-console.log(`Boolean(null) = ${Boolean(null)}`)//false
+console.log(`Boolean("non-empty string") = ${Boolean("non-empty string")}`); //true
+console.log(`Boolean(null) = ${Boolean(null)}`); //false
 
 //The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.
-console.log(`     The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.`);
+console.log(
+  `     The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.`
+);
 
 console.log(`     TASKS:`);
 //What's the result of OR?
@@ -213,7 +223,7 @@ console.log(`       What's the result of OR ?`);
 console.log(`null || 2 || undefined = ${null || 2 || undefined}`); //2 => Correct - that’s the first truthy value.
 //What's the result of OR'ed alerts?
 console.log(`       What's the result of OR'ed alerts ?`);
-console.log(`alert(1) || 2 || alert(3) = ${alert(alert(1) || 2 || alert(3))}`);//alert(1) then alert 2 ignore alert(3)=> Incorrect
+//Uncomment this: console.log(`alert(1) || 2 || alert(3) = ${alert(alert(1) || 2 || alert(3))}`);//alert(1) then alert 2 ignore alert(3)=> Incorrect
 
 /*
 The call to alert does not return a value. Or, in other words, it returns undefined.
@@ -226,12 +236,14 @@ There will be no 3, because the evaluation does not reach alert(3). */
 
 //What is the result of AND?
 console.log(`       What is the result of AND?`);
-console.log(`alert( 1 && null && 2) = ${alert(1 && null && 2)}`);//null => Correct
+console.log(`Uncomment// the Code here`);
+//console.log(`alert( 1 && null && 2) = ${alert(1 && null && 2)}`);//null => Correct
 //The answer: null, because it’s the first falsy value from the list.
 
 //What is the result of AND'ed alerts?
 console.log(`       What is the result of AND'ed alerts?`);
-console.log(`alert( alert(1) && alert(2)) = ${alert( alert(1) && alert(2))}`);
+console.log(`Uncomment// the Code here`);
+//console.log(`alert( alert(1) && alert(2)) = ${alert( alert(1) && alert(2))}`);
 //undefined => Incorrect => alert(1) then alert undefined
 /*
 The call to alert returns undefined (it just shows a message, so there’s no meaningful return).
@@ -241,8 +253,9 @@ because undefined is a falsy value. And && looks for a falsy value
 and returns it, so it’s done. */
 
 //The result of OR AND OR
-console.log(`       The result of OR AND OR`)
-console.log(`alert( null || 2 && 3 || 4 ) = ${alert( null || 2 && 3 || 4 )}`);//3 => Correct
+console.log(`       The result of OR AND OR`);
+console.log(`Uncomment// the Code here`);
+//console.log(`alert( null || 2 && 3 || 4 ) = ${alert( null || 2 && 3 || 4 )}`);//3 => Correct
 /*
 The precedence of AND && is higher than ||, so it executes first.
 The result of 2 && 3 = 3, so the expression becomes:
@@ -250,7 +263,7 @@ The result of 2 && 3 = 3, so the expression becomes:
 Now the result is the first truthy value: 3.
 */
 
-//Change the range between 
+//Change the range between
 /*
 Write an if condition to check that age is between 14 and 90 inclusively.
 
@@ -258,8 +271,23 @@ Write an if condition to check that age is between 14 and 90 inclusively.
 
  */
 console.log(`Read the code inside the IDE`);
-let ageTaskRange = 56;
-if ( ageTaskRange >= 14 && ageTaskRange <= 90 ) {
-    console.log(`The if is: if(ageTaskRange >= 14 && ageTaskRange <= 90)`);
+let ageTaskRange = 12;
+if (ageTaskRange >= 14 && ageTaskRange <= 90) {
+  console.log(`The if 1 is: if(ageTaskRange >= 14 && ageTaskRange <= 90)`);
 }
 //Good, you make it right => Correct
+
+//Check the range outside
+console.log(`       Check the range outside`);
+if (!(ageTaskRange >= 14) && ageTaskRange >= 90) {
+  console.log(`The if 2 is: if(ageTaskRange >= 14 && ageTaskRange <= 90)`);
+} else {
+  console.log(`if is false`);
+}
+//Hmm, you don't understand the exam, but correct a new way
+//You can also do this way
+if (!(ageTaskRange >= 14 && ageTaskRange <= 90)) {
+}
+//OR
+if ( age < 14 || age > 90) {
+}
