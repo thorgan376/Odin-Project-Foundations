@@ -326,7 +326,6 @@ console.log(`       Task 9: Check the login`);
 //     loginPrompt();
 //     buttonLoginPrompt.addEventListener('click', loginPrompt);
 
-//     function loginPrompt() {
     const promptVariable = prompt(`Who's there ?`);
     if(promptVariable == "Admin") {
         console.log(promptVariable); 
@@ -343,7 +342,6 @@ console.log(`       Task 9: Check the login`);
     } else {
         console.log("I don't know you");
 }
-//     }
 
     
 //     console.log(buttonLoginPrompt);
