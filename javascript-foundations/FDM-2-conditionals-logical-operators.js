@@ -318,38 +318,31 @@ null || -1(true) && 1(true)  ->  null || 1(return the last value if both operand
 //Check the login
 console.log(`       Task 9: Check the login`);
 
-// fetch("index-js.html").then(r=>r.text()).then((html)=>{ // get the content of products.html
-//     let element = document.createElement("html");
-//     element.innerHTML = html; // parse the html
-//     const buttonLoginPrompt = element.querySelector(".active-the-login-prompt");
+const buttonLoginPrompt = document.querySelector('.active-the-login-prompt');
 
-//     loginPrompt();
-//     buttonLoginPrompt.addEventListener('click', loginPrompt);
-
-    const promptVariable = prompt(`Who's there ?`);
-    if(promptVariable == "Admin") {
+  function loginPrompt() {
+  const promptVariable = prompt(`Who's there ?`);
+    if(promptVariable === "Admin") {//previous answer is ==
         console.log(promptVariable); 
         const password = prompt(`Password ?`);
-        if(password == "TheMaster") {
+        if(password === "TheMaster") {//previous answer is ==
             console.log("Welcome!");
-        } else if(password == "" || password == undefined) {
+        } else if(password === "" || password === null) {//previous answer is ==
             console.log("Canceled");
+            console.log(promptVariable);
         } else {
             console.log("Wrong password");
+            console.log(promptVariable);
         }
-    } else if(promptVariable == "" || promptVariable == undefined) {
+    } else if(promptVariable === "" || promptVariable === null) {//previous answer is ==
         console.log("Canceled");
+        console.log(promptVariable);
     } else {
         console.log("I don't know you");
-}
+        console.log(promptVariable);
+  }};
 
-    
-//     console.log(buttonLoginPrompt);
-// });
-//const buttonLoginPrompt = document.querySelector('button[class="active-the-login-prompt"]');
-//console.log(buttonLoginPrompt);
-
-
+buttonLoginPrompt.addEventListener('click', loginPrompt);
 
 //Yay, you do it 95% correct, 5% left is just to change from == to ===
 //It's more secure and optimize

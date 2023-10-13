@@ -161,25 +161,25 @@
     <button class="active-the-login-prompt">Active the login prompt</button>
 
 <script>
-  const buttonLoginPrompt = document.querySelector('.active-the-login-prompt');
-  function loginPrompt() {
-  const promptVariable = prompt(`Who's there ?`);
-    if(promptVariable == "Admin") {
-        console.log(promptVariable); 
-        const password = prompt(`Password ?`);
-        if(password == "TheMaster") {
-            console.log("Welcome!");
-        } else if(password == "" || password == undefined) {
-            console.log("Canceled");
-        } else {
-            console.log("Wrong password");
-        }
-    } else if(promptVariable == "" || promptVariable == undefined) {
-        console.log("Canceled");
-    } else {
-        console.log("I don't know you");
-  }};
-buttonLoginPrompt.addEventListener('click', loginPrompt);
+  // const buttonLoginPrompt = document.querySelector('.active-the-login-prompt');
+  // function loginPrompt() {
+  // const promptVariable = prompt(`Who's there ?`);
+  //   if(promptVariable == "Admin") {
+  //       console.log(promptVariable); 
+  //       const password = prompt(`Password ?`);
+  //       if(password == "TheMaster") {
+  //           console.log("Welcome!");
+  //       } else if(password == "" || password == undefined) {
+  //           console.log("Canceled");
+  //       } else {
+  //           console.log("Wrong password");
+  //       }
+  //   } else if(promptVariable == "" || promptVariable == undefined) {
+  //       console.log("Canceled");
+  //   } else {
+  //       console.log("I don't know you");
+  // }};
+//buttonLoginPrompt.addEventListener('click', loginPrompt);
 </script>
 
     <script src="FDM-1.js"></script>
