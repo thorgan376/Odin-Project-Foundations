@@ -30,7 +30,7 @@ for the parent to set the shoppingDone variable to true if the child did the sho
 
 //ELSE IF
 
-const selectOption = document.querySelector(`select`);
+const selectOption = document.querySelector(`select[id="weather-choice"]`);
 const textUnder = document.querySelector(`p[class='label']`)
 
 selectOption.addEventListener('change', weatherForcastStatus);
@@ -52,7 +52,7 @@ function weatherForcastStatus() {
       } else {
         textUnder.textContent = "You haven't make a choice yet";
       }
-
+    }
     //OR you can also do this SWITCH STATEMENT: 
 
     /*
@@ -78,7 +78,6 @@ function weatherForcastStatus() {
             break;
     }
     */
-}
 
 /*
 Any value that is not false, undefined, null, 0, NaN, or an empty string ('')
@@ -135,3 +134,21 @@ The ternary operator is not just for setting variable values;
 you can also run functions, or lines of code — anything you like. 
 The following live example shows a simple theme chooser where the
 styling for the site is applied using a ternary operator. */
+
+const selectTheme = document.querySelector('select[id="theme-choice"]');
+const htmlStyle = document.querySelector("html");
+document.body.style.padding = "10px";
+console.log(selectTheme.value);
+
+function updateTheme(bgColor, textColor) {
+  htmlStyle.style.backgroundColor = bgColor;
+  htmlStyle.style.color = textColor;
+}
+
+selectTheme.addEventListener('change', () => {
+  console.log(selectTheme.value);
+  selectTheme.value === "black" 
+  ? updateTheme("black", "white")
+  : updateTheme("white", "black")
+});
+
