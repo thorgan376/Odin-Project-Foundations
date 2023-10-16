@@ -149,6 +149,22 @@ selectTheme.addEventListener('change', () => {
   console.log(selectTheme.value);
   selectTheme.value === "black" 
   ? updateTheme("black", "white")
-  : updateTheme("white", "black")
+  : updateTheme("white", "black");
 });
+
+//ACTIVE LEARNING
+console.log(`     ACTIVE LEARNING: A simple calendar`);
+
+const selectMonth = document.querySelector('select[id="month-selector"]');
+const monthName = document.querySelector('h2[id="month-name"]');
+if(selectMonth.value) {
+  monthName.textContent = selectMonth.value;
+}
+
+function createCalendar() {
+  monthName.textContent = selectMonth.value;
+}
+
+//ADD CONDITIONAL HERE
+selectMonth.addEventListener('change', createCalendar);
 
