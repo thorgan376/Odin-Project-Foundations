@@ -185,13 +185,17 @@ function daysClassify() {
 }
 
 function createCalendar(days, choice) {
+  // Cách dùng insertBefore:
+  /* const newP = document.createElement('p')
+   newP.textContent = 'Days :';
+   document.body.insertBefore(newP, listDays); */
   if(choice === "Choose the month") {
     monthName.textContent = "You haven't chosen a month yet";
   } else {
     monthName.textContent = choice;
   }
   listDays.innerHTML = '';
-  
+
   for( let i = 1; i <= days; i++) {
     const listItem = document.createElement('li');
     listItem.textContent = i;
