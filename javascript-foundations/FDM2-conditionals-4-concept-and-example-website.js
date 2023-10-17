@@ -155,16 +155,49 @@ selectTheme.addEventListener('change', () => {
 //ACTIVE LEARNING
 console.log(`     ACTIVE LEARNING: A simple calendar`);
 
+//Declare variables
 const selectMonth = document.querySelector('select[id="month-selector"]');
 const monthName = document.querySelector('h2[id="month-name"]');
+const listDays = document.querySelector('ul[id="list-days"]');
+
+//Show the first loaded/previous selected month option
 if(selectMonth.value) {
-  monthName.textContent = selectMonth.value;
+  daysClassify();
 }
 
-function createCalendar() {
-  monthName.textContent = selectMonth.value;
+function daysClassify() {
+  const choice = selectMonth.value;
+  if(selectMonth.value === "January" || 
+  selectMonth.value === "March" ||
+  selectMonth.value === "May" ||
+  selectMonth.value === "July" ||
+  selectMonth.value === "August" ||
+  selectMonth.value === "October" ||
+  selectMonth.value === "December" ) {
+    createCalendar(31, choice);
+  } else if (selectMonth.value === "February") {
+    createCalendar(28, choice);
+  } else if(selectMonth.value === "Choose the month") {
+    createCalendar(0, choice);
+  } else {
+    createCalendar(30, choice);
+  }
 }
 
-//ADD CONDITIONAL HERE
-selectMonth.addEventListener('change', createCalendar);
+function createCalendar(days, choice) {
+  if(choice === "Choose the month") {
+    monthName.textContent = "You haven't chosen a month yet";
+  } else {
+    monthName.textContent = choice;
+  }
+  listDays.innerHTML = '';
+  
+  for( let i = 1; i <= days; i++) {
+    const listItem = document.createElement('li');
+    listItem.textContent = i;
+    listDays.appendChild(listItem);
+  }
+}
+
+selectMonth.addEventListener('change', daysClassify);
 
