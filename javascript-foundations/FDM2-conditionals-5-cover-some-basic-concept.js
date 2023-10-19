@@ -136,3 +136,74 @@ if (company == 'Netscape') {
 
 /*Our eyes scan the code verticaly. Code blocks which span several lines
  are easier to understand than a long, horizontal instruction set.*/
+
+//TASKs: 
+//TASK 1:
+console.log(`     TASKS:`);
+console.log(`       TASK 1: if (a string with zero)`);
+//Will console.log be shown ?
+    if("0") {
+        console.log(`Hello "0" == true`);
+    }//True => Shown => Correct
+
+//TASK2:
+console.log(`       TASK 2: The name of Javascript:`);
+/*Using the if..else construct, write the code which asks: ‘What is the “official” name of JavaScript?’
+
+If the visitor enters “ECMAScript”, then output “Right!”, otherwise – output: “You don’t know? ECMAScript!”*/
+// let codeTheNameOfJavascript = prompt(`What is the “official” name of JavaScript?`,'');
+// if(codeTheNameOfJavascript === "ECMAScript") {
+//     console.log(`Right! It's ECMAScript`);
+// } else {
+//     console.log(`You don't know? “ECMAScript”!`);
+// } //=> Good, you do it correctly
+
+//Code above commented because to prevent annoying prompt popup ( I just don't like it ! );
+
+//TASK 3:
+console.log(`       TASK 3: Show the sign:`);
+/*
+Using if..else, write the code which gets a number via prompt and then shows in alert:
+
+    1, if the value is greater than zero,
+    -1, if less than zero,
+    0, if equals zero.
+
+In this task we assume that the input is always a number. */
+/*
+let numberShowtheSign = prompt(`Enter the number: `, '');
+if(numberShowtheSign > 0) {
+    console.log(`1, if the value is greater than zero`);
+} else if (numberShowtheSign < 0) {
+    console.log(`-1, if less than zero`);
+} else if (numberShowtheSign === 0) {
+    console.log(`0, if equals zero.`);
+} else {
+    console.log(`This is not a number anymore or a NaN`);
+} 
+*/
+//Yay, you do it right. I are not just make it readble 
+//but also create possibilty that can happen if user enter wrong too
+
+//Code above commented because to prevent annoying prompt popup ( I just don't like it ! );
+
+console.log(`       TASK 4: Rewrite 'if' into '?'`);
+//Simple, just rewrite if into ? operator
+
+//Ans:
+let resultConvertIftoQuestionMark = (adc + iwn < 4) ? 'Below' : 'Over';
+//Just this fucking simple line but I just make it complicated
+//50 point
+
+console.log(`       TASK 5: Rewrite 'if..else' into '?':`);
+/*
+Rewrite if..else using multiple ternary operators '?'.
+
+For readability, it’s recommended to split the code into multiple lines.
+ */
+//Ans:
+let messageRewriteElseIf = 
+(loginRewrite == 'Employee') ? 'Hello':
+(loginRewrite == 'Director') ? 'Greetings':
+(loginRewrite == '')         ? 'No login' : '';
+//Correct
