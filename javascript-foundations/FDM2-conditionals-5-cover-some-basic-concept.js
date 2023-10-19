@@ -191,7 +191,7 @@ console.log(`       TASK 4: Rewrite 'if' into '?'`);
 //Simple, just rewrite if into ? operator
 
 //Ans:
-let resultConvertIftoQuestionMark = (adc + iwn < 4) ? 'Below' : 'Over';
+////let resultConvertIftoQuestionMark = (adc + iwn < 4) ? 'Below' : 'Over';
 //Just this fucking simple line but I just make it complicated
 //50 point
 
@@ -202,6 +202,7 @@ Rewrite if..else using multiple ternary operators '?'.
 For readability, it’s recommended to split the code into multiple lines.
  */
 //Ans:
+let loginRewrite;
 let messageRewriteElseIf = 
 (loginRewrite == 'Employee') ? 'Hello':
 (loginRewrite == 'Director') ? 'Greetings':
