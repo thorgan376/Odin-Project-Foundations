@@ -205,3 +205,46 @@ function createCalendar(days, choice) {
 
 selectMonth.addEventListener('change', daysClassify);
 
+//Active Learning: More color choices:
+console.log(`     ACTIVE LEARNING: More color choices`);
+
+const themeChoiceAdvanced = document.querySelector('select[id = "theme-selector"]');
+const html = document.querySelector('html');
+
+if(themeChoiceAdvanced.value) {
+  themeAttribute();
+}
+
+function themeAttribute() {
+  const choice = themeChoiceAdvanced.value;
+  switch(choice) {
+    case 'white': 
+      websiteThemeChanger("white", "black");
+    break;
+    case 'black': 
+      websiteThemeChanger("black", "white");
+    break;
+    
+    case 'purple': 
+      websiteThemeChanger("purple", "white");
+    break;
+
+    case 'yellow': 
+      websiteThemeChanger("yellow", "black");
+    break;
+
+    case 'psychedelic':
+      websiteThemeChanger("chartreuse", "blueviolet");
+    break;
+
+    default :
+    
+  }
+}
+
+function websiteThemeChanger(backgroundColor, color) {
+  htmlStyle.style.backgroundColor = backgroundColor;
+  htmlStyle.style.color = color;
+}
+
+themeChoiceAdvanced.addEventListener('change', themeAttribute);
