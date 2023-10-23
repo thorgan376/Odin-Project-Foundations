@@ -198,6 +198,7 @@ function createCalendar(days, choice) {
 
   for( let i = 1; i <= days; i++) {
     const listItem = document.createElement('li');
+    listItem.className = 'listItem';
     listItem.textContent = i;
     listDays.appendChild(listItem);
   }
