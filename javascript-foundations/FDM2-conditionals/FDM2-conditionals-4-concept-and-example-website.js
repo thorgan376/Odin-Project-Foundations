@@ -203,6 +203,8 @@ function createCalendar(days, choice) {
     listItem.className = 'listItem';
     listItem.textContent = i;
     listDays.appendChild(listItem);
+    // listDays.remove();
+    // => DOM change breakpoints: node removal
   }
 }
 
