@@ -195,9 +195,11 @@ function createCalendar(days, choice) {
     monthName.textContent = choice;
   }
   listDays.innerHTML = '';
-
+  // listDays.setAttribute('background-color', 'red'); 
+  // => Testing attribute modification DOM breakpoint debug javascript
   for( let i = 1; i <= days; i++) {
     const listItem = document.createElement('li');
+    
     listItem.className = 'listItem';
     listItem.textContent = i;
     listDays.appendChild(listItem);
