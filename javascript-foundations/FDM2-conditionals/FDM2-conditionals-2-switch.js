@@ -59,7 +59,8 @@ console.log("     THE DEFAULT KEY WORD : (Look in the code for more info)");
 
 console.log("   COMMON CODE BLOCKS :");
 console.log("     SWITCH EXAMPLE 2 : ");
-switch (a = new Date().getDay()) {
+let a = new Date().getDay();
+switch (a) {
   case 4:
   case 5:
     //console.log(a);
