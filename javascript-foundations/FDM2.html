@@ -60,7 +60,7 @@
     <button class="odd">Press me pls</button>
     <div id="greeting"></div>
 
-    <script>
+    <script async defer>
         const button = document.querySelector('.odd');
 
         function greet() {
@@ -89,7 +89,7 @@
   <p class="lowOrHi"></p>
 </div>
 
-<script>
+<script async defer>
   let randomNumber = Math.floor(Math.random() * 100) + 1;
   const guesses = document.querySelector('.guesses');
   const lastResult = document.querySelector('.lastResult');
@@ -163,7 +163,7 @@
 <p>Using Math.random(): When you load or reload it will change to some link else</p>
 
 <p id="demo"></p>
-<script>
+<script async defer>
   if(Math.random() < 0.5) {
     text = `<a href="https://www.facebook.com/thaison.purpleguy">Visit my Facebook profile</a>`
   } else {
@@ -176,7 +176,7 @@
 <p>Check the login practice: </p>
 <button class="active-the-login-prompt" style="display: block; margin-bottom: 20px;">Active the login prompt</button>
 <p>User: Admin; Password: TheMaster</p>
-<script>
+<script async defer>
   // const buttonLoginPrompt = document.querySelector('.active-the-login-prompt');
   // function loginPrompt() {
   // const promptVariable = prompt(`Who's there ?`);
