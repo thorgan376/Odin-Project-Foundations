@@ -65,22 +65,22 @@ switch (a111) {
   case 5:
     //console.log(a);
     text = "Soon it is Weekend";
-    if (a == 4) {
-      a = "Thursday";
+    if (a111 == 4) {
+      a111 = "Thursday";
     } else { //a ==5
-      a = "Friday";
+      a111 = "Friday";
     }
-    console.log(`Hmm, today is : ${a} and ${text} `);
+    console.log(`Hmm, today is : ${a111} and ${text} `);
     break;
   case 0:
   case 6:
     text = "It is Weekend";
-    if (a == 0) {
-      a = "Sunday";
+    if (a111 == 0) {
+      a111 = "Sunday";
     } else {
-      a = "Saturday";
+      a111 = "Saturday";
     }
-    console.log(`Hmm, today is : ${a} and ${text} `);
+    console.log(`Hmm, today is : ${a111} and ${text} `);
     break;
   default:
     text = "Looking forward to the Weekend";
