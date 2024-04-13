@@ -36,10 +36,10 @@ console.log("Fundamentals Part 1");
 // alert( +y ); // -2
 
 // // Converts non-numbers
-// alert( +true + " = True" ); // 1
-// alert( +"" + " = The blank ");   // 0
+// alert( +true + " = True" ); // 1 = True
+// alert( +"" + " = The blank ");   // 0 = The blank
 
-// // => It actually does the same thing as Number(...), but is shorter.
+// // => It (+ operator) actually does the same thing as Number(...), but is shorter.
 
 // let apples = "2";
 // let oranges = "3";
@@ -112,51 +112,57 @@ console.log("Fundamentals Part 1");
 // alert(" \t \n" - 2);// Test: downgrade the line and NaN; Answer: -2; => Incorrect: Again ???
 
 // //Fix the addition
-// let a = prompt("First number?", 1);
-// let b = prompt("Second number?", 2);
+// let a = prompt("First number?", "");
+// let b = prompt("Second number?", "");
 // //You can put the + operator in above, before the "prompt" word
+//like this:
+/*
+let a = +prompt("First number?", "");
+let b = +prompt("Second number?", "");
+*/
 // //Or the expression like below
 // alert(+a + +b);
 
 ///////////////////////////////////////////// Ctrl + / to run again the code above
-//1
-console.log(23 + 97);
-//2
-console.log(1 - (12 * 905) / 28 + 57 - 11);
-//3
-console.log((4 + 6 + 9) / 77);
-//4
-let a = 10;
-console.log("This is the result of a: " + a);
-//console.log("Another result of a after multiply by 9: " + a*9);
+// //1
+// console.log(23 + 97);
+// //2
+// console.log(1 - (12 * 905) / 28 + 57 - 11); // *,/ first ; +,- later
+// //3
+// console.log((4 + 6 + 9) / 77);
+// //4
+// let a = 10;
+// console.log("This is the result of a: " + a);
+// //console.log("Another result of a after multiply by 9: " + a*9);
 
-let b = 7 * a;
-console.log(b);
+// let b = 7 * a;
+// console.log(b);
 
-//5
-const max = 57;
-let actual = max - 13;
-let percentage = actual / max;
-console.log(percentage);
+// //5
+// const max = 57;
+// let actual = max - 13;
+// let percentage = actual / max;
+// console.log(percentage);
 
-const min = 12;
+// const min = 12;
 
 // ASSIGNMENT:
 // Name the three ways to declare a variable
 
-// Ans: Var, let and const
+// => Ans: Var, let and const
 
 // Which of the three variable declarations should you avoid and why?
 
-// Ans: Sometime the behavior of var is not what u expect
+// => Ans: Sometime the behavior of var is not what u expect
 
 // What rules should you follow when naming variables?
 
-// Ans: 1. The name must contain only letter, digits or the symbol $ and _
-// Ans: 2. The first character must not be a digit
+// => Ans: 1. The name must contain only letter, digits or the symbol $ and _
+// => Ans: 2. The first character must not be a digit
 
 // What happens when you add numbers and strings together?
-// Ans: Only happen when we using + operator ( It both used for addition and conatenation)
+// => Ans: Only happen when we using + operator ( It both used for addition and conatenation)
+
 // String + String => String
 // String + Number + Number => String + String + String
 // Number + Number + String => (Number + Number: Additon first then become string) + String
@@ -175,8 +181,8 @@ const min = 12;
 // Ans: a++ and a--
 
 // Explain the difference between prefixing and postfixing increment/decrement operators.
-// Ans: prefixing: Return the old value after execute
-// Ans: postfixing: Return the new value after execute
+// Ans: prefixing: Return the old value to the assign variable after execute
+// Ans: postfixing: Return the new value to the assign variablefter execute
 
 // What is operator precedence and how is it handled in JS?
 // Ans: From high to low:
@@ -201,6 +207,7 @@ const min = 12;
 // Ans: Unary plus does the same thing as Number(...), but it shorter convert string or non-number to number
 
 //THE DIFFERENT BETWEEN VAR AND LET:
+console.log("THE DIFFERENT BETWEEN VAR AND LET:");
 //https://javascript.info/var
 //1. “var” has no block scope
 //Variables, declared with var, are either function-scoped or global-scoped. They are visible through blocks.
@@ -214,15 +221,21 @@ const min = 12;
 
 //3. “var” variables can be declared below their use
 //var declarations are processed when the function starts (or script starts for globals).
-//In other words, var variables are defined from the beginning of the function, no matter where the definition is (assuming that the definition is not in the nested function).
-//* Declarations are hoisted, but assignments are not.
-//Ex: var phrase = "Hello";
+
+/*In other words, var variables are defined from the beginning of the function, 
+no matter where the definition is (assuming that the definition is not in the nested function).*/
+
+/* Declarations are hoisted ( hoisting - hành vi mặc định của JavaScript 
+    về việc di chuyển các khai báo lên đầu để compiled hay thực thi code của bạn.)
+, but assignments are not. */
+//Example of assignment: var phrase = "Hello";
 /*The line var phrase = "Hello" has two actions in it:
 
     Variable declaration var
     Variable assignment =.
 
-The declaration is processed at the start of function execution (“hoisted”), but the assignment always works at the place where it appears. */
+The declaration is processed at the start of function execution (“hoisted”), 
+but the assignment always works at the place where it appears. */
 
 //4. IIFE - “immediately-invoked function expressions”:
 //- But nowadays there’s no reason to write such code.
