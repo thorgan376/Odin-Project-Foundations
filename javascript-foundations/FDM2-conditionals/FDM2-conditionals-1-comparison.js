@@ -48,9 +48,9 @@ console.log(`The difference after all of a1 and b1: ${a1 == b1}`); //True!!! In 
 
 //Strict Equality
 // == cannot tell differentiate 0 from false :
-console.log(`The differentiate of 0 and false: ${0 == false}`);
+console.log(`The differentiate of 0 and false: ${"0" == false}`);//true
 //The samething happens with an empty string:
-console.log(`The differentiate of '' and false: ${'' == false}`);
+console.log(`The differentiate of '' and false: ${'' == false}`);//true
 // => This happens because operands of different types are converted
 // to numbers by the equality operator ==. An empty string, just like 
 // false, becomes a zero.
@@ -67,12 +67,12 @@ console.log("   COMPARE WITH NULL AND UNDIFINED: ");
 
 //For a strict strict equality check ===
 //These values are different, because each of them is a different type.
-console.log(`null === undefined ???: ${null === undefined}`);
+console.log(`null === undefined ???: ${null === undefined}`); //false
 
 //For a non-strict check ==
 //There’s a special rule. These two are a “sweet couple”: 
 //they equal each other (in the sense of ==), but not any other value.
-console.log(`null == undefined ???: ${null == undefined}`);
+console.log(`null == undefined ???: ${null == undefined}`); // true
 
 //For maths and other comparisons < > <= >=
 //both are converted to number: null => 0; undefined => NaN.
@@ -99,6 +99,7 @@ undefined and null is defined such that, without any conversions,
 they equal each other and don’t equal anything else. 
 That’s why (2) null == 0 is false.
  */
+//alert(`${null == undefined }`);
 
 console.log("   An incomparable undefined: ");
 //The value undefined shouldn’t be compared to other values:

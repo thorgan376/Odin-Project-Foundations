@@ -210,16 +210,19 @@ let b = +prompt("Second number?", "");
 console.log("THE DIFFERENT BETWEEN VAR AND LET:");
 //https://javascript.info/var
 //1. “var” has no block scope
+
 //Variables, declared with var, are either function-scoped or global-scoped. They are visible through blocks.
 //So if you declare a variable in an "if" block code with var type;
 //it will remain access after you call it outside the block if
 //If you put a var type variable inside a code block and inside a function => it now become function-scoped not global-scoped, will only can access inside that function
 
 //2. "var" tolerates redeclarations
+
 //Not like "let" var can declare the same variable any number of times.
 //If we use var with an already-declared variable, it’s just ignored the old value and doesn't trigger an error
 
 //3. “var” variables can be declared below their use
+
 //var declarations are processed when the function starts (or script starts for globals).
 
 /*In other words, var variables are defined from the beginning of the function, 
