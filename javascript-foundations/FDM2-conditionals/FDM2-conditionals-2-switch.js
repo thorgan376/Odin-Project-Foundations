@@ -60,6 +60,10 @@ console.log("     THE DEFAULT KEY WORD : (Look in the code for more info)");
 console.log("   COMMON CODE BLOCKS :");
 console.log("     SWITCH EXAMPLE 2 : ");
 let a111 = new Date().getDay();
+
+console.log(`a111 = ${a111}`);
+//considering sometime you enter the wrong day like Monday to Wednesday,
+//the log may not show up on console and you need to modify the case to test it
 switch (a111) {
   case 4:
   case 5:
@@ -114,4 +118,4 @@ switch (x) {
     text = "No value found";
     console.log(text);
 }
-//END OF SWITCH EXAMPLE`
+//END OF SWITCH EXAMPLE`S

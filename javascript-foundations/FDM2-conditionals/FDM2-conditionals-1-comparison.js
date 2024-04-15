@@ -167,6 +167,6 @@ console.log(`null == "\n0\n" : ${null == "\n0\n"}`);
 //Similar to (4), null only equals undefined.
 
 //Task 7: 
-console.log(`null === +"\n0\n" : ${null === +"\n0\n"}`); 
-//true -- Incorrect
+console.log(`null === +"\n0\n" : ${null === "\n0\n"}`); 
+//true -- Incorrect => False
 //Strict equality of different types. Type of null in Javascript is an Object
