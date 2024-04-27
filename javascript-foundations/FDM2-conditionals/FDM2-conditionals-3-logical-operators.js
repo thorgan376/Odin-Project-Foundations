@@ -1,14 +1,17 @@
 //LOGICAL OPERATORS
 console.log("   LOGICAL OPERATORS");
-//There are four logical operators in JavaScript: || (OR), && (AND), ! (NOT), ?? (Nullish Coalescing).
+//There are four logical operators in JavaScript: 
+// || (OR), && (AND), ! (NOT), ?? (Nullish Coalescing).
 
 console.log("     || OR :");
 console.log(`       The “OR” operator is represented with two vertical line symbols:
 Ex: result = a || b;`);
 /*
-In classical programming, the logical OR is meant to manipulate boolean values only. If any of its arguments are true, it returns true, otherwise it returns false.
+In classical programming, the logical OR is meant to manipulate boolean values only. 
+If any of its arguments are true, it returns true, otherwise it returns false.
 
-In JavaScript, the operator is a little bit trickier and more powerful. But first, let’s see what happens with boolean values.
+In JavaScript, the operator is a little bit trickier and more powerful. 
+But first, let’s see what happens with boolean values.
 
 There are four possible logical combinations: */
 console.log(`true || true == ${true || true}`); //true
@@ -70,7 +73,7 @@ console.log(1 || 0); // 1 (1 is truthy)
 
 console.log(null || 1); // 1 (1 is the first truthy value)
 console.log(null || 0 || 1); // 1 (the first truthy value)
-
+// console.log(`is this ? ${+null}`);
 console.log(undefined || null || 0); // 0 (all falsy, returns the last value)
 //1. Getting the first truthy value from a list of variables or expressions.
 console.log(`       1. Getting the first truthy value from a list of variables or expressions : 
