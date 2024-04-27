@@ -90,16 +90,20 @@ console.log(
 );
 /*Another feature of OR || operator is the so-called “short-circuit” evaluation.
 
-It means that || processes its arguments until the first truthy value is reached, and then the value is returned immediately, without even touching the other argument.
+It means that || processes its arguments until the first truthy value is reached, 
+and then the value is returned immediately, without even touching the other argument.
 
-The importance of this feature becomes obvious if an operand isn’t just a value, but an expression with a side effect, such as a variable assignment or a function call.
+The importance of this feature becomes obvious if an operand isn’t just a value, 
+but an expression with a side effect, such as a variable assignment or a function call.
 
 In the example below, only the second message is printed: */
 true || console.log("not printed");
 false || console.log(`"printed" because false is first before ||`);
-/*In the first line, the OR || operator stops the evaluation immediately upon seeing true, so the alert isn’t run.
+/*In the first line, the OR || operator stops the evaluation immediately 
+upon seeing true, so the alert isn’t run.
 
-=>>>>>>>> Sometimes, people use this feature to execute commands only if the condition on the left part is falsy. */
+=>>>>>>>> Sometimes, people use this feature to execute commands only 
+if the condition on the left part is falsy. */
 
 console.log("     && AND :");
 //The AND Operator is represented with two ampersands
