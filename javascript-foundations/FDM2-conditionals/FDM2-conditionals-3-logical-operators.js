@@ -112,10 +112,10 @@ console.log("     && AND :");
 
 //In classical programming, AND returns true IF BOTH OPERANDS ARE TRUTHY and false otherwise:
 //Look at this example below:
-console.log(`true && true is: ${true && true}`);
-console.log(`false && true is: ${false && true}`);
-console.log(`true && false is: ${true && false}`);
-console.log(`false && false is: ${false && false}`);
+console.log(`true && true is: ${true && true}`); //true
+console.log(`false && true is: ${false && true}`); // false
+console.log(`true && false is: ${true && false}`); // false
+console.log(`false && false is: ${false && false}`); // false
 
 //An example with if;
 let hourAnd = 11;
@@ -127,9 +127,9 @@ if (hourAnd <= 12 && minuteAnd > 30) {
 }
 //Just as with OR, any value is allowed as an operand of AND:
 if (1 && 0) {
-  console.log(`"won't work, because the result is falsy"`);
+  console.log(`"This line won't work, because the end-result is falsy"`); //This is true
 } else {
-  console.log(`Damn it's false`);
+  console.log(`Damn it's false`); //This is false
 }
 
 //AND "&&" finds the first falsy value
@@ -155,7 +155,7 @@ console.log(`1 && 5 is: ${1 && 5}`); //truthy => reutrn 5 - last value
 //if the first operand is falsy
 //AND returns it. The second operand is ignored
 console.log(`null && 5: ${null && 5}`); //null and 5 is ignored
-console.log(`0 && "no matter what": ${0 && "no matter what"}`); //ignored the last one
+console.log(`0 && "no matter what": ${0 && "no matter what it is, the end-result is false"}`); //ignored the last one
 
 //We can also pass several values in a row. See how the first falsy one
 //is returned:
