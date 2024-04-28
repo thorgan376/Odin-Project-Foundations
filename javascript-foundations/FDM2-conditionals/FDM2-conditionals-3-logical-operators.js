@@ -244,7 +244,7 @@ There will be no 3, because the evaluation does not reach alert(3). */
 //What is the result of AND?
 console.log(`       Task 3: What is the result of AND?`);
 console.log(`Uncomment// the Code here`);
-//console.log(`alert( 1 && null && 2) = ${alert(1 && null && 2)}`);//null => Correct
+// console.log(`alert( 1 && null && 2) = ${alert(1 && null && 2)}`);//null => Correct
 //The answer: null, because it’s the first falsy value from the list.
 
 //What is the result of AND'ed alerts?
@@ -287,8 +287,8 @@ if (ageTaskRange >= 14 && ageTaskRange <= 90) {
 
 //Check the range outside
 console.log(`       Task 7: Check the range outside`);
-if (!(ageTaskRange >= 14) && ageTaskRange >= 90) {
-  console.log(`The if 2 is: if(ageTaskRange >= 14 && ageTaskRange <= 90)`);
+if (!(ageTaskRange >= 14) || ageTaskRange >= 90) {
+  console.log(`The if 2 is: if(ageTaskRange <= 14 || ageTaskRange >= 90)`);
 } else {
   console.log(`if is false`);
 }
