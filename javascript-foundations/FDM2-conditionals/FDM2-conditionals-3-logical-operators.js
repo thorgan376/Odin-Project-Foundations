@@ -327,29 +327,57 @@ console.log(`       Task 9: Check the login`);
 
 const buttonLoginPrompt = document.querySelector('.active-the-login-prompt');
 
-  function loginPrompt() {
-  const promptVariable = prompt(`Who's there ?`);
-    if(promptVariable === "Admin") {//previous answer is ==
-        console.log(promptVariable); 
-        const password = prompt(`Password ?`);
-        if(password === "TheMaster") {//previous answer is ==
-            console.log("Welcome!");
-        } else if(password === "" || password === null) {//previous answer is ==
-            console.log("Canceled");
-            console.log(promptVariable);
-        } else {
-            console.log("Wrong password");
-            console.log(promptVariable);
-        }
-    } else if(promptVariable === "" || promptVariable === null) {//previous answer is ==
-        console.log("Canceled");
-        console.log(promptVariable);
+function loginPrompt() {
+  const promptVariable = prompt("Who is there ?", "");
+  if(promptVariable === "Admin") {
+    const passwordVariable = prompt("Please enter your password", "")
+    if (passwordVariable === "TheMaster") {
+      console.log("Login success");
+      console.log(passwordVariable)
+    } else if (passwordVariable === null || passwordVariable === '') {
+      console.log("Password canceled")
+      console.log(passwordVariable);
     } else {
-        console.log("I don't know you");
-        console.log(promptVariable);
-  }};
+      console.log("Wrong password")
+      console.log(passwordVariable);
+    }
+    console.log("Success: ", promptVariable, " and ", passwordVariable);
+  } else if (promptVariable === null || promptVariable === "") {
+    console.log("Canceled")
+    console.log(promptVariable)
+  } else {
+    console.log("I don't know you");
+    console.log(promptVariable);
+  }
+}
+document.addEventListener('click', loginPrompt);
 
-buttonLoginPrompt.addEventListener('click', loginPrompt);
 
+//Last answer:
+// const buttonLoginPrompt = document.querySelector('.active-the-login-prompt');
+
+//   function loginPrompt() {
+//   const promptVariable = prompt(`Who's there ?`);
+//     if(promptVariable === "Admin") {//previous answer is ==
+//         console.log(promptVariable); 
+//         const password = prompt(`Password ?`);
+//         if(password === "TheMaster") {//previous answer is ==
+//             console.log("Welcome!");
+//         } else if(password === "" || password === null) {//previous answer is ==
+//             console.log("Canceled");
+//             console.log(promptVariable);
+//         } else {
+//             console.log("Wrong password");
+//             console.log(promptVariable);
+//         }
+//     } else if(promptVariable === "" || promptVariable === null) {//previous answer is ==
+//         console.log("Canceled");
+//         console.log(promptVariable);
+//     } else {
+//         console.log("I don't know you");
+//         console.log(promptVariable);
+//   }};
+
+// buttonLoginPrompt.addEventListener('click', loginPrompt);
 //Yay, you do it 95% correct, 5% left is just to change from == to ===
 //It's more secure and optimize
