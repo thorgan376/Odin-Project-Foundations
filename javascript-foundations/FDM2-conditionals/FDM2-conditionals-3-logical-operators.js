@@ -350,7 +350,7 @@ function loginPrompt() {
     console.log(promptVariable);
   }
 }
-document.addEventListener('click', loginPrompt);
+buttonLoginPrompt.addEventListener('click', loginPrompt);
 
 
 //Last answer:
