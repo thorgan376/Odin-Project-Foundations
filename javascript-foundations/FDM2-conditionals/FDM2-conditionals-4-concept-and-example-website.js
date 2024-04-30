@@ -46,29 +46,56 @@ const selectOption = document.querySelector(`select[id="weather-choice"]`);
 const textUnder = document.querySelector(`p[class='label']`)
 
 selectOption.addEventListener('change', weatherForcastStatus);
-
+//Solution 1:
 function weatherForcastStatus() {
     const choice = selectOption.value;
-    if (choice === "sunny") {
+    switch (choice) {
+      case "sunny":
         textUnder.textContent =
-          "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
-      } else if (choice === "rainy") {
+        "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+      break;
+
+      case "rainy":
         textUnder.textContent =
-          "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
-      } else if (choice === "snowing") {
+        "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+      break;
+
+      case "snowing":
         textUnder.textContent =
-          "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
-      } else if (choice === "overcast") {
+        "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+      break;
+
+      case "overcast":
         textUnder.textContent =
-          "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
-      } else {
+        "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+      break;
+
+      default:
         textUnder.textContent = "You haven't make a choice yet";
-      }
+    }
+
+//Solution 2:    /*OR you can also do this way*/
+
+    // if (choice === "sunny") {
+    //     textUnder.textContent =
+    //       "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+    //   } else if (choice === "rainy") {
+    //     textUnder.textContent =
+    //       "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+    //   } else if (choice === "snowing") {
+    //     textUnder.textContent =
+    //       "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+    //   } else if (choice === "overcast") {
+    //     textUnder.textContent =
+    //       "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+    //   } else {
+    //     textUnder.textContent = "You haven't make a choice yet";
+    //   }
     }
     //OR you can also do this SWITCH STATEMENT: 
 
-    /*
-    switch (choice) {
+//Solution 3: I just did this above :)))    
+    /*switch (choice) {
         case "sunny":
             textUnder.textContent =
           "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
