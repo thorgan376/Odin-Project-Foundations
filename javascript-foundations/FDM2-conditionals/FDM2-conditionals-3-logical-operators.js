@@ -379,5 +379,6 @@ document.addEventListener('click', loginPrompt);
 //   }};
 
 // buttonLoginPrompt.addEventListener('click', loginPrompt);
+
 //Yay, you do it 95% correct, 5% left is just to change from == to ===
 //It's more secure and optimize

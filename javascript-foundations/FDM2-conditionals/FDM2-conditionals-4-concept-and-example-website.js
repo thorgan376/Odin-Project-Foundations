@@ -16,11 +16,23 @@ so you can afford that toy you wanted." In JavaScript, we could represent this l
 
 let shoppingDone = false;
 let childsAllowance;
+function goShopping() {
+  const vegetables = 5;
+  const meat = 0.5;
+  const rice = 50;
+  if(vegetables >= 4 && meat == 0.5 && rice <= 60) {
+    shoppingDone = true;
+  } else {
 
+  }
+}
+goShopping();
 if (shoppingDone === true) {
   childsAllowance = 10;
+  console.log("Yay, more money");
 } else {
   childsAllowance = 5;
+  console.log("T-T, less money");
 }
 
 /*
