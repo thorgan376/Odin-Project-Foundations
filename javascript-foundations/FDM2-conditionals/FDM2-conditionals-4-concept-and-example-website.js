@@ -174,22 +174,44 @@ you can also run functions, or lines of code — anything you like.
 The following live example shows a simple theme chooser where the
 styling for the site is applied using a ternary operator. */
 
-const selectTheme = document.querySelector('select[id="theme-choice"]');
-const htmlStyle = document.querySelector("html");
+//define variables
+const themeChooser = document.querySelector(`select[id='theme-choice']`);
+const htmlStyle = document.querySelector(`html`);
 document.body.style.padding = "10px";
-console.log(selectTheme.value);
-
-function updateTheme(bgColor, textColor) {
-  htmlStyle.style.backgroundColor = bgColor;
+console.log(themeChooser.value);
+//define function that work with variables
+function themeSwitch(backgroundColor, textColor) {
+  htmlStyle.style.backgroundColor = backgroundColor;
   htmlStyle.style.color = textColor;
 }
 
-selectTheme.addEventListener('change', () => {
-  console.log(selectTheme.value);
-  selectTheme.value === "black" 
-  ? updateTheme("black", "white")
-  : updateTheme("white", "black");
+/*
+
+If you want to run some code when the page first loads, you can do that in jQuery
+with this (you tagged your question with jQuery so you may as well use it):
+
+$(document).ready(function() {
+    // put your code here that runs when the page first loads
 });
+
+Or, you can do this in plain Javascript:
+
+window.addEventListener("load", function() {
+    // put your code here that runs when the page first loads
+});
+
+*/
+window.addEventListener('load', () => {
+  themeChooser.value === "black" ?
+  themeSwitch('black', 'white') :
+  themeSwitch('white','black');
+})
+//add changes when the event start
+themeChooser.addEventListener('change', () => {
+  themeChooser.value === "black" ?
+  themeSwitch('black', 'white') :
+  themeSwitch('white','black');
+})
 
 //ACTIVE LEARNING
 console.log(`     ACTIVE LEARNING: A simple calendar`);
