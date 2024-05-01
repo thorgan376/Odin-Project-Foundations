@@ -215,87 +215,8 @@ themeChooser.addEventListener('change', () => {
 
 //ACTIVE LEARNING
 console.log(`     ACTIVE LEARNING: A simple calendar`);
+//Recode the example for better reviewing
 
-//Declare variables
-const selectMonth = document.querySelector('select[id="month-selector"]');
-const monthName = document.querySelector('h2[id="month-name"]');
-const listDays = document.querySelector('ul[id="list-days"]');
-
-//Show the first loaded/previous selected month option
-if(selectMonth.value) {
-  daysClassify();
-}
-
-//Thís fuction will justify which months name value 
-//to show the day according to it
-function daysClassify() {
-  const choice = selectMonth.value;
-  // if(selectMonth.value === "January" || 
-  // selectMonth.value === "March" ||
-  // selectMonth.value === "May" ||
-  // selectMonth.value === "July" ||
-  // selectMonth.value === "August" ||
-  // selectMonth.value === "October" ||
-  // selectMonth.value === "December" ) {
-  //   createCalendar(31, choice);
-  // } else if (selectMonth.value === "February") {
-  //   createCalendar(28, choice);
-  // } else if(selectMonth.value === "Choose the month") {
-  //   createCalendar(0, choice);
-  // } else {
-  //   createCalendar(30, choice);
-  // }
-
-  //An alternative way of using that choice variale:
-  switch (selectMonth.value) {
-    case "January":
-    case "March":
-    case "May":
-    case "July":
-    case "August":
-    case "October":
-    case "December":
-      createCalendar(31, choice);
-    break;
-
-    case "February":
-      createCalendar(28, choice);
-    break;
-
-    case "Choose the month":
-      createCalendar(0, choice);
-    break;
-
-    default:
-      createCalendar(30, choice);
-  }
-}
-
-function createCalendar(days, choice) {
-  // Cách dùng insertBefore:
-  /* const newP = document.createElement('p')
-   newP.textContent = 'Days :';
-   document.body.insertBefore(newP, listDays); */
-  if(choice === "Choose the month") {
-    monthName.textContent = "You haven't chosen a month yet";
-  } else {
-    monthName.textContent = choice;
-  }
-  listDays.innerHTML = '';
-  // listDays.setAttribute('background-color', 'red'); 
-  // => Testing attribute modification DOM breakpoint debug javascript
-  for( let i = 1; i <= days; i++) {
-    const listItem = document.createElement('li');
-    
-    listItem.className = 'listItem';
-    listItem.textContent = i;
-    listDays.appendChild(listItem);
-    // listDays.remove();
-    // => DOM change breakpoints: node removal
-  }
-}
-
-selectMonth.addEventListener('change', daysClassify);
 
 //Active Learning: More color choices:
 console.log(`     ACTIVE LEARNING: More color choices`);

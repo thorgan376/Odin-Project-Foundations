@@ -1,17 +1,1 @@
-ul#list-days {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0px;
-  padding-left: 0px;
-}
-ul .listItem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #4a2db6;
-  margin: 1px;
-  color: white;
-  list-style: none;
-  width: 23%;
-  height: 30px;
-}
+/* Recode the example for better reviewing */
