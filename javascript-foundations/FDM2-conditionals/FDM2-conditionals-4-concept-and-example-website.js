@@ -226,22 +226,48 @@ if(selectMonth.value) {
   daysClassify();
 }
 
+//Thís fuction will justify which months name value 
+//to show the day according to it
 function daysClassify() {
   const choice = selectMonth.value;
-  if(selectMonth.value === "January" || 
-  selectMonth.value === "March" ||
-  selectMonth.value === "May" ||
-  selectMonth.value === "July" ||
-  selectMonth.value === "August" ||
-  selectMonth.value === "October" ||
-  selectMonth.value === "December" ) {
-    createCalendar(31, choice);
-  } else if (selectMonth.value === "February") {
-    createCalendar(28, choice);
-  } else if(selectMonth.value === "Choose the month") {
-    createCalendar(0, choice);
-  } else {
-    createCalendar(30, choice);
+  // if(selectMonth.value === "January" || 
+  // selectMonth.value === "March" ||
+  // selectMonth.value === "May" ||
+  // selectMonth.value === "July" ||
+  // selectMonth.value === "August" ||
+  // selectMonth.value === "October" ||
+  // selectMonth.value === "December" ) {
+  //   createCalendar(31, choice);
+  // } else if (selectMonth.value === "February") {
+  //   createCalendar(28, choice);
+  // } else if(selectMonth.value === "Choose the month") {
+  //   createCalendar(0, choice);
+  // } else {
+  //   createCalendar(30, choice);
+  // }
+
+  //An alternative way of using that choice variale:
+  switch (selectMonth.value) {
+    case "January":
+    case "March":
+    case "May":
+    case "July":
+    case "August":
+    case "October":
+    case "December":
+      createCalendar(31, choice);
+    break;
+
+    case "February":
+      createCalendar(28, choice);
+    break;
+
+    case "Choose the month":
+      createCalendar(0, choice);
+    break;
+
+    default:
+      createCalendar(30, choice);
   }
 }
 
