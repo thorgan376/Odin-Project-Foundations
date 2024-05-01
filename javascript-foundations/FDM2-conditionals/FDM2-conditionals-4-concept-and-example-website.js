@@ -217,6 +217,76 @@ themeChooser.addEventListener('change', () => {
 console.log(`     ACTIVE LEARNING: A simple calendar`);
 //Recode the example for better reviewing
 
+const selectedMonth = document.querySelector(`select[id="month-selector"]`);
+const monthName = document.querySelector(`h2[id="month-name"]`);
+const listDays = document.querySelector(`ul[id="list-days"]`);
+
+//test the variables
+/* 
+days.addEventListener('click', ()=> {
+  console.log(2, days.value + "Haha");
+})
+monthName.addEventListener('click', ()=> {
+  console.log(2, monthName.value + "Haha");
+})
+selectedMonth.addEventListener('change', () => {
+  console.log(1, selectedMonth.value);
+})
+*/
+
+if(selectedMonth.value) {
+  dayClassify();
+}
+
+//onChange method when user change the month
+selectedMonth.addEventListener('change', () => {
+  dayClassify();
+});
+
+function dayClassify() {
+  const choice = selectedMonth.value;
+  let days = 30;
+  if(choice === "January" ||
+  choice === "March" ||
+  choice === "May" ||
+  choice === "July" ||
+  choice === "August" ||
+  choice === "October" ||
+  choice === "December") {
+    days = 31;
+  } else if(choice === "February") {
+    days = 28;
+  }
+    else if(choice === "Select the month") {
+    days = 0;
+  }
+  createCalendar(days, choice);
+}
+
+//This function create the days of the month we've chosen
+function createCalendar(days, selectedMonthName) {
+  // Cách dùng insertBefore:
+  /* const newP = document.createElement('p')
+   newP.textContent = 'Days :';
+   document.body.insertBefore(newP, listDays); */
+  if(selectedMonthName === "Select the month") {
+    monthName.innerHTML = "Please choose the month"
+  } else {
+    monthName.textContent = selectedMonthName;
+  }
+  listDays.innerHTML = '';
+  
+  // listDays.setAttribute('background-color', 'red'); 
+  // => Testing attribute modification DOM breakpoint debug javascript
+  for(let i = 1; i <= days; i++) {
+    const listItem = document.createElement('li');
+    listItem.id = "listItem"
+    listItem.textContent = i;
+    listDays.appendChild(listItem);
+    // listDays.remove();
+    // => DOM change breakpoints: node removal
+  }
+}
 
 //Active Learning: More color choices:
 console.log(`     ACTIVE LEARNING: More color choices`);
