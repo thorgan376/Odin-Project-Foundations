@@ -216,7 +216,7 @@ themeChooser.addEventListener('change', () => {
 //ACTIVE LEARNING
 console.log(`     ACTIVE LEARNING: A simple calendar`);
 //Recode the example for better reviewing
-
+//First, i declare the variables which are needed to affect the data outside the HTML page
 const selectedMonth = document.querySelector(`select[id="month-selector"]`);
 const monthName = document.querySelector(`h2[id="month-name"]`);
 const listDays = document.querySelector(`ul[id="list-days"]`);
@@ -233,7 +233,7 @@ selectedMonth.addEventListener('change', () => {
   console.log(1, selectedMonth.value);
 })
 */
-
+//Second, i check if when the page load, the data may still the so they days have to correspond and display the data
 if(selectedMonth.value) {
   dayClassify();
 }
