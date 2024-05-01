@@ -289,6 +289,7 @@ function createCalendar(days, selectedMonthName) {
 }
 
 //Active Learning: More color choices:
+//This also resemble to the above example so I think it isn't need to practice again
 console.log(`     ACTIVE LEARNING: More color choices`);
 
 const themeChoiceAdvanced = document.querySelector('select[id = "theme-selector"]');
